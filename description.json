@@ -76,16 +76,18 @@
 
 
 	"braket.ai" : {
-		"description": "This project is still in it's initial prototype phase. Dataset Maeketplace with Source Control. Here, the UI for the dataset presentation page, the dataset presentation card for quick searches and some other various elements made for the site are displayed. It is made in React with JSX, likely to also be transfered into Typescript. The project also contains a Command Line Interface, an API and a server still in their infancy, written in C and C++. For a full understanding of the project, it is recommended to visit the github page at:",
 		"tabs": {
 			"0": {
-				"name": "Dataset Presentation"
+				"name": "Dataset Presentation",
+                "description": "This project is still in it's initial prototype phase. Dataset Maeketplace with Source Control. Below is the UI design, built in React.js, for the dataset presentation page. It was designed to easily convey to the user quickly if the dataset is useful for one's situation. It does this with a short description, a longer README type description where the creators can go in depth, a data format and snippet visualiser, a code section that highlightes popular code that uses the dataset in question for a practical demo of use cases, an Issues section to highlight what contributors should work towards and a Discussion section for public forum-like discussion. While just a demo for now, in the future, users shall be able to simply copy the CDN URL present on the dataset card and paste it into a CLI console interface for quick and easy remote access to the dataset, voiding the need for a full download. The right side panel contains basic information, as well as credit, sources and tags."
 			},
 			"1": {
-				"name": "Landing"
+				"name": "Landing",
+                "description" : "Below are a couple of UI elements for a logged in Landing page, the notifications for a returning user. In order, they are a Contribution Update Notification, for open-source dataset contributions, much like GitHub pull requests, a Private Message Notification, a Message Reply Notification, built with a recursive function that is invariant to the number of replies or their level, and finally a Contribution Request Notification, made for dataset admins to request each contributor to update a certain number of entries by a certain deadline."
 			},
 			"2": {
-				"name": "Search"
+				"name": "Search",
+                "description": "Below are the UI elements made for rapid dataset preview, mostly used in searches. It was engineered to give the user all the necesary information about the usefulness of a dataset in a clear and concise way. It contains pricing and licence information, data structure and preview as well as a description and user-driven upvote system."
 			}
 		}
 	}

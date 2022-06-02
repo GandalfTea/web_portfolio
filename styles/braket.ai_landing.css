@@ -1,0 +1,484 @@
+/*	Header	*/
+
+.logo-landing {
+	margin-left: 45vw; 
+	margin-top: 20vh;
+}
+
+
+/* TOP OF PAGE */
+
+.avatar {
+	position: fixed;
+	z-index: 2;
+	height: 50px !important;
+	width: 50px !important;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+	margin-left: 90vw;
+	margin-top: 2vh;
+}
+
+.landing-search {
+	position: static !important;
+	width: 30vw !important;
+	margin-left: 50%;
+	margin-top: 5vh;
+	transform: translate(-50%, 0%);
+}
+
+.news {
+	width: 200px;
+	margin: auto;
+	font-family: "Lato";
+	font-size: 20px;
+	margin-top: 20vh;
+	margin-bottom: 5vh;
+}
+
+
+/*	ENTRY	*/
+
+.entry {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 100%;
+	position: relative;
+}
+
+.entry-button {
+	width: 40px;
+	height: 40px;
+	background-color: #DFDFDF;
+	border: none;
+	outline: none;
+	border-radius: 40px;
+	position: absolute;
+	top: 50px;
+	left: 20vw;
+	display: none;
+	cursor: pointer;
+}
+
+.entry-button img {
+	margin-top: 3px;
+}
+
+.entry:hover {
+	background-color: #EEE;
+}
+
+.entry:hover .entry-button {
+	display: block;
+}
+
+
+/*	SIMPLE NOTIFICATION */
+
+.simple-notification {
+	margin-left: 25vw;
+	background-color: white;
+	border-radius: 20px;
+	width: 350px;
+	height: 60px;
+	padding: 22px 30px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.simple-notification-message {
+	display: flex;
+	flex-direction: row;
+	font-family: "Lato";
+	width: auto;
+}
+
+.contribution-update__main {
+	width: auto;
+	font-weight: 700;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contribution-update__ticket {
+	width: auto;
+	font-weight: 400;
+	font-size: 10px;
+	margin-left: 30px;
+	margin-top: 5px;
+}
+
+
+/*	MESSAGE PROMPT */
+
+.message-body {
+	margin-left: 25vw;
+	width: 52vw;
+	height: auto;
+	background-color: white;
+	border-radius: 20px;
+	font-family: "lato";
+	padding: 30px 40px;
+	text-align: justify;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.message-body__title {
+	font-weight: 700;
+	font-size: 16px;
+	display: flex;
+	flex-direction: row;
+}
+
+
+.message-body p {
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.message-body__title p {
+	font-weight: 300;
+	font-size: 12px;
+	margin-left: 20px;
+	margin-top: 5px;
+	text-decoration: underline;
+}
+
+.message-input {
+	transition: 0.2s;
+	margin-left: 25vw;
+	width: 52vw;
+	height: 40px;
+	margin-top: 20px;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	background-color: white;
+	padding: 5px 40px;
+	font-size: 15px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.message__opened {
+	transition: 0.2s;
+	margin-left: 25vw;
+	width: 52vw;
+	height: auto;
+	min-height: 80px;
+	margin-top: 20px;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	background-color: white;
+	padding: 5px 40px;
+	font-size: 15px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.message-input__opened {
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	width: 100%;
+	height: auto;
+	resize: none;
+	font-family: "Lato";
+	font-size: 15px;
+}
+
+.message-buttons {
+	display: flex;
+	flex-direction: row;
+}
+
+.message-buttons div {
+	margin-left: 40vw;
+}
+
+.message-input__add-file {
+	height: 30px;
+	width: 30px;
+	border-radius: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+
+
+
+
+/*	COMMENT 	*/
+
+
+.comment {
+	width: 47vw; 
+	display: flex;
+	flex-direction: column;
+	margin-left: 3vw;
+	margin-top: 20px;
+	font-family: "Lato";
+}
+
+.comment-2 {
+	margin-left: 6vw;
+	width: 44vw;
+}
+
+.line-body {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	position: relative;
+}
+.comment-line {
+	background-color: #2f2f2f;
+	width: 15px;
+	border-radius: 20px;
+}
+
+.comment-body {
+	margin-left: 20px;
+	margin-top: 30px;
+	font-family: "Lato";
+	font-size: 15px;
+	text-align: justify;
+}
+
+.comment-body h3 {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.comment-bottom {
+	display: flex;
+	flex-direction: row;
+}
+.comment-bottom button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	margin-top: 10px;
+	text-decoration: underline;
+	font-family: "Lato";
+	font-size: 15px;
+}
+
+.comment .card-vote {
+	position: static !important;
+	margin-left: 30px !important;
+}
+
+.comment .card-vote p {
+	color: #2f2f2f !important;
+	margin-top: 10px !important;
+}
+
+.comment-reply-button {
+	margin-right: 1px;
+}
+
+.comment-reply-button:hover {
+	margin-right: 0px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.comment-reply textarea {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid #2f2f2f;
+	resize: none;
+	width: 100%;
+	height: auto;
+	margin-top: 40px;
+	padding: 0px 30px;
+	font-family: "Lato";
+	font-size: 15px;
+}
+
+
+
+/*	COMMENT PROMPT	*/
+
+.comment-prompt {
+	margin-left: 25vw;
+	width: 52vw;
+}
+
+.comment-prompt__original-message {
+	background-color: #2f2f2f;
+	border-radius: 20px;
+	width: 52vw;
+	height: 45px;
+	color: white;
+	font-family: "lato";
+	display: flex;
+	flex-direction: row;
+	padding: 12px 40px;
+}
+
+.comment-prompt__original-message p {
+	margin-left: 30px;
+	margin-top: 3px;
+}
+
+
+
+
+/*	REQUEST PROMPT	*/
+
+.request {
+	margin-left: 25vw;
+	width: 52vw;
+	height: auto;
+	background-color: #2f2f2f;
+	color: white;
+	padding: 40px 40px;
+	border-radius: 20px;
+	font-family: "lato";
+}
+
+.request p {
+	margin-top: 20px;
+}
+
+.request-bottom {
+	display: flex;
+	flex-direction: row;
+}
+
+.request-bottom div {
+	margin-top: 20px;
+	width: auto;
+}
+
+.request-bottom div p {
+	margin-top: 5px;
+}
+
+.request-buttons {
+	display: flex;
+	flex-direction: row;
+	width: auto;
+	margin-left: 15vw !important;
+	margin-top: 60px !important;
+}
+
+.request-buttons .button-border {
+	margin-left: 20px;
+}
+
+
+
+/*	CHALLANGES	*/
+
+.challanges {
+	width: 100%;
+	height: auto;
+	background-color: #2f2f2f;
+	padding: 50px 0px;
+	margin-top: 15vh;
+}
+
+.challanges .button {
+	margin-top: 6vh;
+	margin-bottom: 2vh;
+	margin-left: 48vw;
+	cursor: pointer;
+} 
+
+.challanges-title {
+	width: 180px;
+	margin: auto;
+	font-family: "Lato";
+	font-size: 20px;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	color: white;
+}
+
+.challange {
+	background-color: #f6f6f6;
+	width: 60vw;
+	height: auto;
+	padding: 35px 100px 20px 100px;
+	border-radius: 25px;
+	margin-top: 50px;
+	margin-left: 20vw;
+	font-family: "Lato";
+	transition: 0.2s;
+}
+
+.challange:hover {
+	transition: 0.2s;
+	margin-left: 20.1vw;
+}
+
+.challange h3 {
+	margin-bottom: 20px;
+}
+
+.challange p {
+	text-align: justify;
+} 
+
+.challange div {
+	display: flex;
+	flex-direction: row;
+	margin-top: 30px;
+}
+
+.challange div .button-border {
+	border-color: #2f2f2f;
+	margin-left: 31vw;
+	height: 30px;
+	cursor: pointer;
+}
+
+.challange div .button-border p {
+	color: #2f2f2f;
+}
+
+.challange div .button-tag {
+	margin-top: 0;
+	margin-left: 30px;
+}
+
+
+/*	POPULAR DATASTS		*/
+
+.popular-datasets h3 {
+	width: 160px;
+	margin: auto;
+	font-family: "Lato";
+	font-size: 20px;
+	margin-top: 20vh;
+	margin-bottom: 10vh;
+}
+
+.popular-more .button-tag {
+	margin-bottom: 10vh;
+	margin-left: 49vw;
+	cursor: pointer;
+}

@@ -7,6 +7,7 @@ import search_data from './imported/search-result.json';
 // HTML inject imports
 import DatasetPage from './imported/braket.ai/DatasetPage.jsx';
 import DatasetSearchCard from './imported/braket.ai/DatasetSearchCard.jsx';
+import { Entry, news, CommentPrompt, MessagePrompt, Notification, RequestPrompt, ContributionUpdate, Challange } from './imported/braket.ai/landing.jsx';
 
 
 
@@ -62,6 +63,7 @@ class Tabs extends React.Component {
 	}
 
 
+
 /* Grab the HTML structure of HTML presentations. For onw only one. */
 	getHTML( site, tab=0 ) {
 		switch(site) {
@@ -73,7 +75,28 @@ class Tabs extends React.Component {
 						break;
 
 					case '1':
-						//return <LandingPage />
+                        var news_ui = [];
+                        for( const i of news.news ) {
+                            switch(i.type) {
+                                case 'contribution-update':
+                                    news_ui.push(<Entry content={ <ContributionUpdate result={i.result} ticket={i.ticket} />} />);
+                                    break;
+                                case 'message':
+                                    news_ui.push(<Entry content={ <MessagePrompt title={i.title} author={i.author} message={i.message} />} />);
+                                    break;
+                                case 'comment':
+                                    news_ui.push(<Entry content={ <CommentPrompt level={1} original={i.original} comments={i.replies} />} />);
+                                    break;
+                                case 'request':
+                                    news_ui.push(<Entry content={ <RequestPrompt title={i.workforce} message={i.message} num={i.num} task={i.task} deadline={i.deadline} />} />);
+                                    break;
+                            }
+                        } 
+                        return (
+                            <div>
+                                {news_ui}
+                            </div>
+                        );
 						break;
 
 					case '2':
@@ -120,9 +143,6 @@ class Tabs extends React.Component {
 		if( this.props.type === "images" ) {
 			return(
 					<div className="expanded_restrain">
-						<div className="expanded_close">
-							<img src="" alt="exit button" />
-						</div>
 						<div className="expanded_about">
 							<h3>About</h3>
 							<p> {sites[this.props.link]["description"]} </p>
@@ -145,12 +165,9 @@ class Tabs extends React.Component {
 		} else if ( this.props.type === "html" ) {
 			return(
 					<div className="expanded_restrain">
-						<div className="expanded_close">
-							<img src="" alt="exit button" />
-						</div>
 						<div className="expanded_about">
 							<h3>About</h3>
-							<p> {sites[this.props.link]["description"]} </p>
+							<p> {sites[this.props.link]["tabs"][this.state.tab]["description"]} </p>
 						</div>
 						<div className="tab-selector">
 							<div>

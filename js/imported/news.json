@@ -1,0 +1,216 @@
+{
+	"news": [
+		{
+			"type": "contribution-update",
+			"result": "accepted",
+			"ticket": "common_gen #5421"
+		},
+		{
+			"type": "message",
+			"title": "Hey bro, saw your open dataset",
+			"author": "Daniel Dee's Nuts",
+			"message": "I would like to participate in the moderation of entries, as I happen to have a lot of experience with all the races of demons from all levels in hell. I even met one in person at one point (though I was high on meth, I believe they only show themselves to the ones they deem worthy, like the ones that are rebels).\n I would also like to suggest banning all contributions made by women, as they cannot be trusted with data this important." 
+		},
+		{
+			"type": "comment",
+			"comment-type": "self",
+			"original": "Garbage collection recomandation",
+			"replies": [
+				{
+					"author": "Daniel Dee's Nuts",
+					"message": "I would like to participate in the moderation of entries, as I happen to have a lot of experience with all the races of demons from all levels in hell. I even met one in person at one point (though I was high on meth, I believe they only show themselves to the ones they deem worthy, like the ones that are rebels). I would also like to suggest banning all contributions made by women, as they cannot be trusted with data this important.\nHope to hear from you soon, Daniel.",
+					"score": "-56",
+					"replies": [
+						{
+							"author": "Dee's Nuts Hater",
+							"message": "When I would heal Israel, the iniquity of Ephraim is revealed, and the evil deeds of Samaria; for they deal falsely; the thief breaks in, and the bandits raid outside. But they do not consider that I remember all their evil. Now their deeds surround them; they are before my face. By their evil they make the king glad, and the princes by their treachery. They are all adulterers; they are like a heated oven whose baker ceases to stir the fire, from the kneading of the dough until it is leavened. On the day of our king, the princes became sick with the heat of wine; he stretched out his hand with mockers.\n\nHosea 7:1-16",
+							"score": "4269",
+							"replies": "none"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "request",
+			"workforce": "common_gen",
+			"message": "Hey guys! As you might know, the vote to add another field was mostly positive, so we will now start working towards adding the pgp_format_idx. There are currently ~2 million entries that need modification, so each one in the workforce should do ~100 each. If you are unable, please decline so that your entries go to someone else. This change should take around 2 weeks. While this is going on, the modified dataset will be on the working branch. The unmodified one will be on the main branch. Once this is done, we will merge the working branch with the main, so if you wish to not have the new field, please filter it in your code.\n\nThanks to all the workforce volunteers!\nBiich Las'agna",
+			"num": 100, 
+			"task": "insert the pgp_format_idx field into all the entries",
+			"deadline": "23 February"
+		}
+	],
+	"challanges": [
+		{
+			"name": "ImageNet Large Scale Visual Recognition Challenge (ILSVRC)",
+			"description": "The ImageNet Large Scale Visual Recognition Challenge (ILSVRC) evaluates algorithms for object detection and image classification at large scale. One high level motivation is to allow researchers to compare progress in detection across a wider variety of objects -- taking advantage of the quite expensive labeling effort. Another motivation is to measure the progress of computer vision for large scale image indexing for retrieval and annotation.",
+			"attempts": "9842"
+		},
+		{
+			"name": "common_gen",
+			"description": "CommonGen is challenging because it inherently requires 1) relational reasoning using background commonsense knowledge, and 2) compositional generalization ability to work on unseen concept combinations. Our dataset, constructed through a combination of crowd-sourcing from AMT and existing caption corpora, consists of 30k concept-sets and 50k sentences in total.",
+			"attempts": "4521"
+		},
+		{
+			"name": "The Hutter Prize",
+			"description": "Being able to compress well is closely related to intelligence as explained below. While intelligence is a slippery concept, file sizes are hard numbers. Wikipedia is an extensive snapshot of Human Knowledge. If you can compress the first 1GB of Wikipedia better than your predecessors, your (de)compressor likely has to be smart(er). The intention of this prize is to encourage development of intelligent compressors/programs as a path to AGI.",
+			"attempts": "12485"
+		}
+	],
+	"datasets": [
+		{
+			"name": "common_gen",
+			"description": "CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.",
+			"score": 247,
+			"tags": [
+				"language",
+				"text-generation"
+			],
+			"selling": {
+				"full price": "30 USD",
+				"partial": "3 USD",
+				"free licence": "Y"
+			},
+			"data":[
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "A skier is skiing down a mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog is wagging his tail."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog wags his tail at the boy."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "a dog wags its tails with its heart"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "woman paddling canoe on a lake"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "paddle an open canoe along lake ."
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "a man padles his canoe on a lake."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "a train pulls into station"
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "train pulling in to station ."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "the train pulling into station"
+            }
+			],
+			"licence": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions"
+		},
+		{
+			"name": "common_gen",
+			"description": "CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.",
+			"score": 247,
+			"tags": [
+				"language",
+				"text-generation"
+			],
+			"selling": {
+				"full price": "30 USD",
+				"partial": "3 USD",
+				"free licence": "Y"
+			},
+			"data":[
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "A skier is skiing down a mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog is wagging his tail."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog wags his tail at the boy."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "a dog wags its tails with its heart"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "woman paddling canoe on a lake"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "paddle an open canoe along lake ."
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "a man padles his canoe on a lake."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "a train pulls into station"
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "train pulling in to station ."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "the train pulling into station"
+            }
+			],
+			"licence": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions"
+		}
+	]
+}

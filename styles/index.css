@@ -172,11 +172,13 @@ ul {
 
 .project_expanded {
 	width: 100vw;
-	margin-left: 50%;
-	transform: translate(-50%, -0%);
+	margin-left: -100%;
+    position: relative;
+	/* transform: translate(-50%, -0%); */
 	background-color: #F6F6F6;
 	margin-top: 75px;
 	padding: 100px;
+    transition: 0.2s;
 }
 
 .expanded_restrain {
@@ -223,12 +225,36 @@ ul {
 /* Close Button */
 
 .expanded_close {
-	position: fixed;
-	height: 69px;
-	width: 69px;
+	position: absolute;
+	height: 60px;
+	width: 60px;
 	border-radius: 69px;
-	background-color: #AAA;
+	background-color: #FFF;
 	margin-left: 85vw;
+    top: 50px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+	            0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.expanded_close:hover {
+    cursor: pointer;
+    transition: 0.2s;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			  	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			    64px 66px 80px rgba(0, 0, 0, 0.07);
+}
+
+.expanded_close img {
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 
@@ -272,8 +298,8 @@ ul {
 
 
 .comment {
-	width: 300px;	
-	margin-left: 8vw;
+	width: 20vw !important;	
+	margin-left: 8vw !important;
 }
 
 

@@ -24,19 +24,19 @@ const Introduction = function() {
 
 
 const TimeEntry = function(props) {
-	return <p><strong> {props.start} { props.until!="" ? " - " + props.until + ", " : ", "} {props.title} </strong> {props.description} </p>
+	return <p><strong> {props.start} { props.until!="" ? " - " + props.until + ": " : ": "} {props.title} </strong> {props.description} </p>
 }
 
 
+//<TimeEntry start="2021" until="2022" title="Graphic Design Advisor" description="for Claritatea Magazine" />
 
 const Experience = function() {
 	return(
 		<div className="experience">
 			<h3>Work Experience</h3>
-			<TimeEntry start="2021" until="2022" title="Graphic Design Advisor" description="for Claritatea Magazine" />
-			<TimeEntry start="2021" until="" title="Front End Developer" description=", freelance, Octav Bancila Highschool Iasi, Romania, built the magazine website claritatea.ro" />
-			<TimeEntry start="2020" until="" title="Front End Developer" description="freelance, built house presentation website stejar.casa" />
-			<TimeEntry start="2019" until="2020" title="Lead Graphic Designer" description="for Claritatea and ArtEast Magazines, Octav Bancila Highschool, Iasi, Romania" />
+            <TimeEntry start="2022" until="" title="Front End Developer and Designer" description="freelance, in the process of building louisgeorge.me." />
+			<TimeEntry start="2019" until="2021" title="Front End Developer and Graphic Designer" description=", Octav Bancila Highschool, built the magazine website claritatea.ro, designed two volumes of the Claritatea magazine and one volume of the ArtEast magazine." />
+			<TimeEntry start="2020" until="" title="Front End Developer and Designer" description="freelance, built house presentation website stejar.casa" />
 			<TimeEntry start="2019" until="" title="Poster Designer" description="for Octav Bancila Highschool and Mihail Sturdza Emergency Situations Inspectorate, Iasi, Romania" />
 			<TimeEntry start="2018" until="2019" title="Graphic Designer" description="for the Erasmus+ program My City, My Home, My Responsibility" />
 		</div>
@@ -96,7 +96,7 @@ const Projects = function() {
 							  description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
 				<ProjectCard title="House Presentation Website" tech="JS, Three.js, Google Maps API" link='stejar.casa' type="images"
 							  description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
-				<ProjectCard title="Personal Project Blog" tech="React.js, JSX" link="louis.george" 
+				<ProjectCard title="Personal Project Blog" tech="React.js, JSX" link="louisgeorge.me" 
 							 description="A personal blog / project tracker." />
 				<ProjectCard title="Advanced TODO list" tech="JS, QR code generator, base64 links" link="lists.directory" 
 							 description="An advanced shareable todo list with QR code generation, base64 link generation, priority setting, hex input background color change." />
@@ -176,6 +176,8 @@ class Page extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { extra: false };
+        this.project_state = { "braket.ai": false, "claritatea.netlify.app/": false, "stejar.casa": false,
+                               "louisgeorge.me": false, "lists.directory": false };
 	}
 	
 	render() {

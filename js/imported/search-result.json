@@ -1,0 +1,243 @@
+
+{
+	"query": "reasoning",
+	"results": [
+		{
+			"name": "common_gen",
+			"description": "CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.",
+			"score": 247,
+			"tags": [
+				"language",
+				"text-generation"
+			],
+			"selling": {
+				"full price": "30 USD",
+				"partial": "3 USD",
+				"free licence": "Y"
+			},
+			"data":[
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "A skier is skiing down a mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog is wagging his tail."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog wags his tail at the boy."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "a dog wags its tails with its heart"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "woman paddling canoe on a lake"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "paddle an open canoe along lake ."
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "a man padles his canoe on a lake."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "a train pulls into station"
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "train pulling in to station ."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "the train pulling into station"
+            }
+			],
+			"licence": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions"
+		},
+
+
+		{
+			"name": "common_gen",
+			"description": "CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.",
+			"score": 247,
+			"tags": [
+				"language",
+				"text-generation",
+				"reasoning",
+				"fake-tag"
+			],
+			"selling": {
+				"full price": "30 USD",
+				"partial": "3 USD",
+				"free licence": "Y"
+			},
+			"data":[
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "A skier is skiing down a mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog is wagging his tail."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog wags his tail at the boy."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "a dog wags its tails with its heart"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "woman paddling canoe on a lake"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "paddle an open canoe along lake ."
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "a man padles his canoe on a lake."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "a train pulls into station"
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "train pulling in to station ."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "the train pulling into station"
+            }
+			],
+			"licence": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions"
+		},
+
+		{
+			"name": "common_gen",
+			"description": "CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.",
+			"score": 247,
+			"tags": [
+				"language",
+				"text-generation",
+				"reasoning"
+			],
+			"selling": {
+				"full price": "30 USD",
+				"partial": "3 USD",
+				"free licence": "Y"
+			},
+			"data":[
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "A skier is skiing down a mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog is wagging his tail."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog wags his tail at the boy."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "a dog wags its tails with its heart"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "woman paddling canoe on a lake"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "paddle an open canoe along lake ."
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "a man padles his canoe on a lake."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "a train pulls into station"
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "train pulling in to station ."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "the train pulling into station"
+            }
+			],
+			"licence": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions"
+		}
+	]
+}

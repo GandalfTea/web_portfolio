@@ -1,0 +1,92 @@
+{
+	"claritatea.netlify.app/": {
+		"description": "Magazine website presenting the newest issues, live updates, physical copy order and newsletter. Implemented using vanilla JS. It contains a password-protected admin pannel that allows the magazine creators to update the website without scripting knowledge. Github: https://github.com/GandalfTea/claritatea.ro",
+		"tabs": {
+			"0": {
+				"name": "Landing",
+				"desktop": "./assets/claritatea_desktop.png",
+				"mobile": "./assets/claritatea_mobile.png",
+				"numcom" : "3",
+				"comments": {
+
+					"0": {
+						"text": "Student Art Carousel with buttons and author. In the future, articles and painting will be submited through this website and filtered in the admin page on a custom server.",
+						"depth": "250"
+					},
+
+					"1": {
+						"text": "Custom cursor carousel of older magazines.",
+						"depth" : "1500"
+					},
+							
+					"2": {
+						"text": "RESTful API news section updated from separate password-protected admin panel.",
+						"depth": "1800"
+					}
+				}
+			}
+		}
+	},
+
+
+	"stejar.casa": {
+		"description": "House presentation website done for private client. It extensive use of videos, a 3D Terrain and House placement model made with Three.js and a Google Maps API embeded easy localisation. It also contains a detailed construction album page that separates each step of construction with a brief description and a set of site pictures.",
+		"tabs": {
+			"0" : {
+				"name": "Landing",
+				"desktop": "./assets/stejarcasa_desktop.png",
+				"mobile": "./assets/stejarcasa_mobile.png",
+				"numcom": "4",
+				"comments": {
+					"0": {
+						"text": "Autoplay 3D render video of the house.",
+						"depth": "300"
+					},
+	
+					"1": {
+						"text": "Three.js House Model. Movable with a mouse click.",
+							"depth": "900"
+					},
+
+					"2": {
+						"text": "Quick view of construction in current state. More detailed pictures can be found in the Construction tab.",
+						"depth": "1650"
+					},
+
+					"3": {
+						"text": "Google Maps API embeding with Contact form and details.",
+						"depth": "2430"
+					}
+				}	
+			},
+			"1": {
+				"name": "Construction",
+				"desktop": "./assets/stejarcasa_img_desktop.png",
+				"mobile": "./assets/stejarcasa_img_mobile.png",
+				"numcom": "1",
+				"comments": {
+					"0": {
+						"text": "Image viewer, separated into the individual construction stages for an easy structural overview. The page has two different viewing options, depending on weather is it accessed on desktop or mobile. The stage selector on the right updates depending on what you are viewing automatically.",
+						"depth": "0"
+					}
+				}	
+			}
+		}
+	},
+
+
+	"braket.ai" : {
+		"description": "This project is still in it's initial prototype phase. Dataset Maeketplace with Source Control. Here, the UI for the dataset presentation page, the dataset presentation card for quick searches and some other various elements made for the site are displayed. It is made in React with JSX, likely to also be transfered into Typescript. The project also contains a Command Line Interface, an API and a server still in their infancy, written in C and C++. For a full understanding of the project, it is recommended to visit the github page at:",
+		"tabs": {
+			"0": {
+				"name": "Dataset Presentation"
+			},
+			"1": {
+				"name": "Landing"
+			},
+			"2": {
+				"name": "Search"
+			}
+		}
+	}
+}

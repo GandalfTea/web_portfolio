@@ -1,0 +1,101 @@
+{
+    "common-gen": {
+        "title": "common_gen",
+        "card-description": "CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.",
+        "cdn-link": "cdn.braket.ai/4547362",
+				"raddress": "datasets / regression",
+        "entries": 9128,
+				"files": 1,
+        "file-type": "CSV",
+        "file-size": "34Kb",
+        "licence": "CC0: Public Domain",
+        "score": 247,
+				"price-options": {
+					"full dataset": "300 USD",
+					"partial dataset": {
+						"1": "3 USD",
+						"50": "130 USD"
+					},
+					"free licence": "extended"
+				},
+        "tasks": [
+            "Regression"
+        ],
+        "language": "English",
+        "homepage": "inklab.usc.edu",
+        "tags": [
+            "language",
+            "text-generation",
+            "reasoning"
+        ],
+        "models": [
+            "..."
+        ],
+        "description": "### Summary\n\nCommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning. Given a set of common concepts; the task is to generate a coherent sentence describing an everyday scenario using these concepts.\n\nCommonGen is challenging because it inherently requires 1) relational reasoning using background commonsense knowledge, and 2) compositional generalization ability to work on unseen concept combinations. Our dataset, constructed through a combination of crowd-sourcing from AMT and existing caption corpora, consists of 30k concept-sets and 50k sentences in total.\n\n### Dataset Structure\n\nWe show detailed information for up to 5 configurations of the dataset.\n\n \n### Data Instances\n\n#### default\nAn example of 'train' looks as follows.\n\n```\n  {\n    \"concept_set_idx\": 0,\n,\n      address = \"Online\",\n      publisher = \"Association for Computational Linguistics\",\n      url = \"https://www.aclweb.org/anthology/2020.findings-emnlp.165\",\n      doi = \"10.18653/v1/2020.findings-emnlp.165\",\n      pages = \"1823--1840\"\n  }\n\n```\nContributions\nThanks to @JetRunner, @yuchenlin, @thomwolf, @lhoestq for adding this dataset.",
+        "preview": [
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "A skier is skiing down a mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog is wagging his tail."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog wags his tail at the boy."
+            },
+            {
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "a dog wags its tails with its heart"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "woman paddling canoe on a lake"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "paddle an open canoe along lake ."
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "a man padles his canoe on a lake."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "a train pulls into station"
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "train pulling in to station ."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "the train pulling into station"
+            }
+        ],
+        "code": "cdn.braket.ai/4547362/code",
+        "issues": "cdn.braket.ai/4547362/issues",
+        "discussion": "cdn.braket.ai/4547362/discussion"
+    }
+}

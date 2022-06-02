@@ -1,0 +1,197 @@
+
+
+
+/*		DATASET RESULT CARD		*/
+
+.braket-ai p,
+.braket-ai h1,
+.braket-ai h2,
+.braket-ai h3 {
+	line-height: normal;
+}
+
+.query {
+	margin-top: 13%;
+	margin-left: 48%;
+	font-family: "lato";
+	font-weight: 400;
+	font-size: 25px;
+}
+
+.results {
+	margin-top: 150px;
+}
+
+.dataset-search-card {
+	width: 65%;
+	margin: auto;
+	margin-top: 5%;
+	margin-bottom: 100px;
+	position: relative;
+}
+
+.dataset-search-card__main {
+	height: 240px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+	border-radius: 20px;
+	transition: 0.2s;
+}
+
+.dataset-search-card__main:hover {
+	transition: 0.5s;
+	margin-left: 3px;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			 	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			    64px 66px 80px rgba(0, 0, 0, 0.07);
+}
+
+.dataset-search-card__details {
+	background-color: #2f2f2f;
+	border-radius: 20px 0px 0px 20px;
+	width: 500px;;
+	color: white;
+	padding-left: 30px;
+	font-family: "Lato";
+	position: relative;
+	z-index: 2;
+	transition: 0.2s;
+	/* box-shadow: 7px 0 10px 0 #CCC; */ 
+}
+
+
+.dataset-search-card__details h2 {
+	font-size: 20px;
+	margin-bottom: 25px;
+	margin-top: 20px;
+	font-family: "Roboto Mono";
+	font-weight: 700;
+}
+
+.dataset-search-card__details p {
+	width: 80%;
+	font-size: 13px;
+	text-align: justify;
+	font-weight: 400;
+}
+
+.dataset-search-card__menu {
+	display: flex;
+	flex-direction: column;
+	width: 120px;
+	margin-top: 11%;
+	margin-left: 40px;
+}
+
+.dataset-search-card__menu button {
+	width: 100%;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	margin-bottom: 10px;
+	text-align: left;
+	color: #2f2f2f;
+	font-weight: 200;
+	font-size: 13px;
+	opacity: 70%;
+}
+
+.dataset-search-card__menu button:hover {
+	opacity: 100%;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.dataset-search-card__button__pressed {
+	opacity: 100% !important;
+	font-weight: 700 !important;
+	cursor: pointer;
+}
+
+.dataset-search-card__content {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	background-color: white; 
+	border-radius: 0px 20px 20px 0px;
+}
+
+.dataset-search-card__data pre {
+	margin-top: 6%;
+	margin-left: 10%;
+}
+
+.dataset-search-card__data {
+	height: 200px; 
+	width: 70%;
+	margin-top: 10px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.dataset-search-card__data::-webkit-scrollbar {
+	display: none;
+}
+
+.dataset-search-card__data table {
+	font-size: 12px;
+	margin-top: 30px;
+}
+
+.braket-ai .buy-options {
+	position: static !important;
+	margin: 0 !important;
+}
+
+.braket-ai .buy-options h3 {
+	font-size: 15px !important;
+}
+
+.braket-ai .buy-options h1 {
+	font-size: 20px !important;
+	margin-top: -3px !important;
+}
+
+.braket-ai .buy-options .buy-display {
+	margin: 0 !important;
+}
+
+.dataset-search-card__buy-options {
+	display: flex;
+	flex-direction: row;
+	margin-top: 30px;
+}
+
+.dataset-search-card__buy-options .button-border {
+	margin-top: -5px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.dataset-search-card__tags {
+	margin-left: 20px;
+}
+
+.details__options {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	
+}
+
+.braket-ai .card-vote {
+	position: static !important;
+	margin-top: 15px !important;
+}

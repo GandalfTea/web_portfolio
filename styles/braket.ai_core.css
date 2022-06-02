@@ -1,0 +1,905 @@
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+
+body {
+	background-color: #F6F6F6;
+}
+
+
+
+
+/* MAIN DATASET CARD AND ADDRESS*/
+
+
+.card-address {
+	width: 55%;
+	height: auto;
+	margin-left: 13vw;
+	margin-top: 10vh;
+}
+
+.relative-address {
+	margin: 0;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	font-family: "Roboto Mono";
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.relative-address a {
+	text-decoration: none;
+	color: black;
+}
+
+.relative-address a:hover {
+	font-weight: 700;
+}
+
+.dataset-card {
+	background-color: #2F2F2F;
+	border-radius: 25px;
+	position: relative;
+	transition: 0.2s;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.dataset-card:hover {
+	transition: 0.2s;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			 	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			    64px 66px 80px rgba(0, 0, 0, 0.07);
+}
+
+.dataset-card h3, 
+.dataset-card h2 {
+	color: white;
+	font-weight: 400;
+	margin: 0;
+	margin-left: 50px;
+}
+
+.dataset-card h2 {
+	font-family: "Roboto Mono";
+	font-size: 22px;
+	padding-top: 30px;
+	font-weight: 700;
+}
+
+.dataset-card h3 {
+	font-family: "Lato";
+	font-size: 15px;
+	margin-top: 30px;
+	width: 80%;
+}
+
+@media only screen and (max-width: 1000px) {
+
+	.relative-address {
+		display: none;
+	}
+
+	.card-address {
+		width: 100%;
+		height: 40vh;
+		margin: 0;
+	}
+
+	.dataset-card {
+		border-radius: 0px;
+		height: auto;
+		padding: 1vh;
+	}
+	
+	.dataset-card:hover {
+		box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+					0 2px 2px rgba(0,0,0,0.11), 
+					0 4px 4px rgba(0,0,0,0.11), 
+					0 6px 8px rgba(0,0,0,0.11),
+					0 8px 16px rgba(0,0,0,0.11);
+	}
+
+	.dataset-card h2 {
+		font-size: 2vh;
+		padding-top: 10vh;
+	}
+
+	.dataset-card h3 {
+		font-size: 1.5vh;
+		text-align: justify;
+		margin-top: 2vh;
+	}
+
+	.dataset-card .button-border {
+		display: none;
+	}
+
+}
+
+
+.card-vote {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	right: 40px;
+	top: 20px;
+}
+
+.score_button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+
+.upvote {
+	transform:rotate(180deg);
+}
+
+.upvote,
+.downvote {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.card-vote p {
+	color: white;
+	font-family: "Lato";
+	font-weight: 300;
+	font-size: 15px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+	.card-vote {
+		top: 3vh;
+		right: 5vh;
+	}
+	
+	.upvote,
+	.downvote {
+		width: 2vh;
+		margin-right: 1vh;
+	}
+
+	.card-vote p {
+		font-size: 1.5vh;
+	}
+}
+
+.bottom {
+	display: flex;
+	flex-direction: row;
+}
+
+@media only screen and (max-width: 1000px) {
+	.bottom {
+		flex-direction: column;
+	}
+}
+
+.link-background {
+	width: 250px;
+	height: 30px;
+	background-color: #484848;
+	border-radius: 30px;
+	margin-top: 40px;
+	margin-left: 50px;
+	margin-bottom: 25px;
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+.link-background:active {
+	background-color: #585858;
+}
+
+
+.link-background p {
+	color: white;
+	font-family: "roboto mono";
+	font-weight: 400;
+	font-size: 13px;
+	margin: 0;
+	margin-top: 5px;
+	margin-left: 25px;
+	user-select: none;
+	width: auto;
+}
+
+.link-background img {
+	margin-left: 30px;
+	margin-top: 5px;
+	height: 18px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.link-background {
+		width: 42vw;
+		height: 2.5vh;
+	}
+
+	.link-background p {
+		margin-top: 0.5vh;
+		font-size: 1.1vh;
+	}
+	
+	.link-background img {
+		height: 1.5vh;
+		margin-top: 0.5vh;
+	}
+}
+
+
+.buy {
+	position: absolute;
+	right: 150px;
+	bottom: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.buy .button {
+		position: relative;
+		height: 3.5vh;
+		width: 8vh;
+		border-radius: 50vh;
+		margin: 0px;
+		top: -4vh;
+		right: -3vh;
+	}
+
+	.buy .button p {
+		font-size: 1.7vh;
+	}
+}
+
+
+.button {
+	width: auto;
+	height: 35px;
+	background-color: #F6F6F6;
+	border-radius: 30px;
+	outline: none;
+	border: none;
+}
+
+.button p {
+	font-size: 15px;
+	padding: 0px 20px 0px 20px;
+	margin: 0px;
+	color: #2F2F2F;
+	font-weight: 700;
+	font-family: "Lato";
+}
+
+.button-border {
+	width: auto;
+	height: 35px;
+	background-color: transparent;
+	border-radius: 30px;
+	outline: none;
+	border: 2px solid #F6F6F6;
+}
+
+.button-border p {
+	font-size: 15px;
+	padding: 0px 20px 0px 20px;
+	margin: 0px;
+	color: #F6F6F6;
+	font-weight: 700;
+	font-family: "Lato";
+}
+
+.bottom .button-border {
+	position: absolute;
+	right: 40px;
+	bottom: 25px;
+}
+
+.button-tag {
+	width: auto;
+	height: 30px;
+	background-color: #2F2F2F;
+	border-radius: 30px;
+	outline: none;
+	border: none;
+	margin-right: 10px;
+	margin-top: 10px;
+	transition: 0.2s;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.button-tag:hover {
+	cursor: pointer;
+	margin-right: 9px;
+	transition: 0.2s;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			 	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			    64px 66px 80px rgba(0, 0, 0, 0.07);
+}
+
+.button-tag p {
+	width: auto;
+	padding: 0px 15px; 
+	margin: 0px;
+	color: #F6F6F6;
+	font-weight: 700;
+	font-size: 15px;
+	font-family: "lato";
+}
+
+.button-none {
+	width: auto;
+	height: 32px;
+	border-radius: 30px;
+	outline: none;
+	border: none;
+	margin-right: 10px;
+	margin-top: 10px;
+	transition: 0.2s;
+	background-color: transparent;
+}
+
+.button-none p {
+	width: auto;
+	padding: 0px 20px; 
+	margin: 0px;
+	color: #2f2f2f;
+	font-weight: 700;
+	font-size: 15px;
+	font-family: "lato";
+}
+
+.button-none:hover {
+	cursor: pointer;
+	margin-top: 9px;
+}
+
+.button-none__clicked {
+	background-color: #2f2f2f;
+}
+
+.button-none__clicked p {
+	color: white;
+}
+
+
+
+
+/*		BUY OPTIONS MENU		*/
+
+.buy-options {
+	position: absolute;
+	left: 20%;
+	height: 40px;
+	width: 200px;
+	margin-left: 30%;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+}
+
+.buy-options h3 {
+	width: auto;
+	font-size: 17px;
+	font-weight: 700px;
+	margin: 0;
+}
+
+.buy-options h1 {
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 27px;
+	color: white;
+	margin-left: 10%;
+	margin-top: -5px;
+}
+
+.buy-display {
+	display: flex;
+	flex-direction: row;
+	height: 20px;
+}
+
+.buy-display button {
+	width: 15px;
+	margin-left: 10px;
+	margin-top: 5px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.buy-options__menu {
+	position: absolute;
+	margin-left: -30px;
+	margin-top: -20px;
+	height: 140px;
+	width: 150px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+}
+
+.buy-options__menu button {
+	outline: none;
+	border: none;
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 17px;
+	margin-top: 13%;
+	background-color: white;
+}
+
+.buy-options__menu button:hover {
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 1000px) {
+	.buy-options {
+		position: relative;
+		left: 3vh;
+		margin: 0;
+		margin-top: 3vh;
+		height: 3vh;
+		width: 60vw;
+		margin-bottom: 5vh;
+	}
+	
+	.buy-options h3 {
+		font-size: 1.7vh;
+	}
+	
+	.buy-options h1 {
+		font-size: 3vh;
+	}
+	
+	.buy-options button {
+		width: 3vh;
+		height: 3vh;
+		background-color: #484848;
+		border-radius: 50px;
+		margin-left: 5vw;
+		margin-top: -0.2vh;
+	}
+
+	.buy-options button img {
+		width: 1vh;
+		height: 1vh;
+	}
+}
+
+
+
+/* 	SIDE BAR 	*/
+
+.side-panel {
+	font-family: "Lato";
+	font-size: 14px;
+	position: absolute;
+	right: 18%;
+	top: 43%;
+}
+
+.side-panel_entry {
+	margin-top: 70px;
+}
+
+.side-panel_entry h3 {
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 15px;
+	margin-left: 5px;
+}
+
+.side-panel_entry div {
+	display: flex;
+	flex-direction: column;
+}
+
+@media only screen and (max-width: 1100px) {
+	.side-panel {
+		display: none;
+	}
+	
+}
+
+
+/*	CONTENT CARD	*/
+
+.content {
+	margin-left: 15%;
+	margin-top: 2%;
+}
+
+.content-buttons {
+	margin-left: 5%;
+	margin-bottom: 2%;
+}
+
+.card {
+	width: 65%;
+	height: auto;
+	padding: 50px;
+	margin-top: 20px;
+	background-color: white;
+	border-radius: 25px;
+	transition: 0.3s;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.card:hover {
+	transition: 1s;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			 	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			    64px 66px 80px rgba(0, 0, 0, 0.07);
+}
+
+/* 	DATA TABLE	*/
+
+
+
+.data-table {
+    font-size: 13px;
+    font-family: "Roboto Mono";
+    font-weight: 300;
+    border-spacing: 50px 8px;
+		text-align: center;
+		overflow: scroll;
+}
+
+.data-table tr{
+    margin-left: 20px;
+}
+
+
+/*	MOBILE CONTENT CARD	*/
+.mobile-content-card {
+	width: 90%;
+	background-color: white;
+	border-radius: 50px;
+	height: auto;
+	margin: auto;
+	margin-top: 2vh;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.readme_markdown {
+	height: 50vh;
+	overflow-y: scroll;
+	padding: 2vh;
+}
+
+.mobile-content-card h3 {
+	padding: 2vh 0px 2vh 2vh;
+	font-size: 2vh;
+}
+
+.mobile-content-card__top {
+	display: flex;
+	flex-direction: row;
+}
+
+.mobile-content-card button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+}
+
+.mobile-content-card button img {
+	width: 1.5vh;
+	position: absolute;
+	right: 7vh;
+}
+
+
+.mobile-content-card .data-table {
+	font-size: 1.5vh;
+}
+
+.mobile-table {
+	font-size: 1.5vh;
+	height: 50vh;
+	overflow-y: scroll;
+	`
+}
+
+
+/*	CODE CARDS	*/
+
+.code-card {
+    position: relative;
+		font-family: "Lato";
+}
+
+.code-card h3 {
+	font-weight: 700;
+	font-size: 18px;
+	color: black;
+	text-decoration: underline;
+	text-decoration-color: black;
+}
+
+.code-card p {
+	margin-top: 10px;
+	margin-left: 15px;
+}
+
+.code-author {
+	font-size: 13px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.code-card .card-vote p {
+	color: black;
+	margin: 0;
+}
+
+.code-card .card-vote {
+	position: absolute;
+	top: -30px;
+	right: -20px;
+}
+
+.code-mobile {
+	width: 90%;
+	margin: auto;
+	margin-top: 5vh;
+}
+
+.code-mobile h3 {
+	margin-bottom: 2vh;
+	margin-left: 3vh;
+	font-size: 1.5vh;
+}
+
+.code-mobile .card {
+	width: 100%;
+}
+
+
+
+/*		HEADER		*/
+
+.header{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	width: 80%;
+	top: 30px;
+	margin-left: 5%;
+}
+
+.logo {
+	width: 10%;
+	left: 5%;
+	margin-top: 8px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.logo:hover {
+	width: 10.5%;
+	transition: 0.2s;
+}
+
+.search-dataset {
+	position: absolute;
+	left: 40%;
+	border: none;
+	outline: none;
+	background-color: white;
+	border-radius: 30px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+	height: 35px;
+	width: 41%;
+	padding: 10px 30px;
+	font-family: "lato";
+	font-weight: 400;
+	font-size: 15px;
+	transition: 0.2s;
+}
+
+.search {
+	position: absolute;
+	left: 29.5vw;
+	border: none;
+	outline: none;
+	background-color: white;
+	border-radius: 30px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+	height: 35px;
+	width: 41%;
+	padding: 10px 30px;
+	font-family: "lato";
+	font-weight: 400;
+	font-size: 15px;
+	transition: 0.2s;
+}
+
+.search-dataset:hover,
+.search:hover {
+	transition: 0.2s;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+			    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		 			 		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		   			 	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			 				26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			  		  64px 66px 80px rgba(0, 0, 0, 0.07);
+}
+
+.search-icon-dataset {
+	height: 15px;
+	position: absolute;
+	left: 78%;
+	margin-top: 10px;
+}
+
+.search-icon {
+	height: 15px;
+	position: absolute;
+	left: 75%;
+	margin-top: 10px;
+}
+
+.avatar {
+	height: 20px;
+	width: 20px;
+	border-radius: 30px;
+	image-fit: contain;
+	background-color: white;
+}
+
+.sign-up,
+.log-in {
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 15px;
+	text-decoration: none;
+	color: #2f2f2f;
+	position: absolute;
+	left: 90%;
+	top: 10px;
+}
+
+.log-in {
+	left: 95%;
+	font-weight: 700;
+}
+
+.sign-up-dataset,
+.log-in-dataset {
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 15px;
+	text-decoration: none;
+	color: #2f2f2f;
+	position: absolute;
+	left: 85%;
+	top: 10px;
+}
+
+.log-in-dataset {
+	left: 90%;
+	font-weight: 700;
+}
+
+
+
+/*		FOOTER		*/
+
+.footer-simple {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	margin-left: 37vw;
+	margin-top: 3%;
+	margin-bottom: 2%;
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 13px;
+}
+
+.footer-simple-dataset {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	margin-left: 29%;
+	margin-top: 3%;
+	margin-bottom: 2%;
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 13px;
+}
+
+.footer-simple-dataset img,
+.footer-simple img {
+	width: 15px;
+}
+
+.footer-simple-dataset p,
+.footer-simple p {
+	margin-left: 10px;
+}
+
+.footer-simple-dataset a,
+.footer-simple a {
+	text-decoration: none;
+	color: black;
+	margin-left: 20%;
+}
+
+.footer-simple-dataset a,
+.footer-simple a:hover {
+	text-shadow:0px 0px 0.5px black;
+}
+
+
+/*	PAINTINGS	*/
+
+.paintings {
+	margin-top: 150px;
+}
+
+.painting {
+	width: 650px;
+	border-radius: 13px;
+	margin-top: 40px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}

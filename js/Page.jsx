@@ -3,6 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import { render } from 'react-dom';
 import ProjectCard from './Project.jsx';
+import ContactForm from './Contact.jsx';
 
 
 const Introduction = function() {
@@ -13,9 +14,9 @@ const Introduction = function() {
 			<img src="./assets/drawing.jpg" className="intro_image" />
 			<div>
 				<h3 className="intro__des_title">About</h3>
-				<p>Systems are mostly plagued by stagnation and complexity. I yearn for my work to not only bypass these challenges, but also achieve a higher order computation of the problem, no matter what the problem is. Motivated by understanding, I aim towards higher levels of abstraction and knowledge.</p>
-				<p>The problems I have solved so far include creating a simple and intuitive UI for a dataset marketplace, modernizing and creating the online presence of the Claritatea magazine, increasing viewership and sponsors and increasing interest in real estate with a modern presentation website.</p>
-				<p>The experience from a digital arts background coupled with UI/UX university courses allow me to create and implement highly intuitive and easy to use user interfaces, with an inclination towards the experimental side. Alongside this, it has allowed me to create raster illustrations in many styles, both environmental and focused on characters.</p>
+				<p>Over time, systems trend towards either stagnation or over-complexity. I am to develop user experiences that constantly evolve and make use of the newest available technologies, but also keep it simple. Motivated by understanding, I dive into various fields in my free time and see how everything I learn can be linked into all of my work.</p>
+				<p>So far, the problems I have tackled and solved include creating the online presence of the Claritatea artistic magazine, designing and currently developing a dataset marketplace that allows users to crowdsource the creation and maintenance of datasets, and building a real-estate presentation website that makes use of 3D models. In my free time, I have also delved into Computer Vision, building SLAM algorithms in C++ and Python, Computer Graphics developing a game engine from scratch, and Financial Markets, developing a market simulator.</p>
+				<p><strong>GitHub</strong>: <a href="https://github.com/GandalfTea">https://github.com/GandalfTea</a></p>
 			</div>
 		</div>
 	);
@@ -35,9 +36,9 @@ const Experience = function() {
 		<div className="experience">
 			<h3>Work Experience</h3>
             <TimeEntry start="2022" until="" title="Front End Developer and Designer" description="freelance, in the process of building louisgeorge.me." />
-			<TimeEntry start="2019" until="2021" title="Front End Developer and Graphic Designer" description=", Octav Bancila Highschool, built the magazine website claritatea.ro, designed two volumes of the Claritatea magazine and one volume of the ArtEast magazine." />
+			<TimeEntry start="2019" until="2021" title="Front End Developer and Graphic Designer" description=", Octav Bancila Highschool, designed and built the magazine website claritatea.ro, designed two volumes of the Claritatea magazine and one volume of the ArtEast magazine." />
 			<TimeEntry start="2020" until="" title="Front End Developer and Designer" description="freelance, built house presentation website stejar.casa" />
-			<TimeEntry start="2019" until="" title="Poster Designer" description="for Octav Bancila Highschool and Mihail Sturdza Emergency Situations Inspectorate, Iasi, Romania" />
+			<TimeEntry start="2019" until="" title="Graphic Designer" description="for Octav Bancila Highschool and Mihail Sturdza Emergency Situations Inspectorate, Iasi, Romania" />
 			<TimeEntry start="2018" until="2019" title="Graphic Designer" description="for the Erasmus+ program My City, My Home, My Responsibility" />
 		</div>
 	)
@@ -81,6 +82,8 @@ const AdditionalSkills = function() {
 	)
 }
 
+				//<ProjectCard  title="Hyper-Dimensional Object Visualizer in C++ with Web Assembly" tech="C++, Web Assembly, emscripten" type="images" htmlname="TBD" filename="" 
+				//			  description="A multi-dimensional object simulator and visualiser written in C++ with OpenGL and GLUT, ported to the web using Web Assembly." />
 
 
 // Use Hook to expand and show all projects. Initially only 3.
@@ -92,14 +95,14 @@ const Projects = function() {
 			<div className="projects">
 				<ProjectCard  title="AI Dataset Marketplace and Source Control" tech="React.js, JSX" type="html" htmlname="braket.ai" filename="DatasetPage.jsx" 
 							  description="The front-end of a marketplace website that also offers tools for source-control and crowd-sourcing for the creation of new datasets." />
-				<ProjectCard title="Magazine Website with RESTful Admin Panel" tech="JS, REST" link="claritatea.netlify.app/" type="images"
-							  description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
 				<ProjectCard title="House Presentation Website" tech="JS, Three.js, Google Maps API" link='stejar.casa' type="images"
 							  description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
-				<ProjectCard title="Personal Project Blog" tech="React.js, JSX" link="louisgeorge.me" 
-							 description="A personal blog / project tracker." />
-				<ProjectCard title="Advanced TODO list" tech="JS, QR code generator, base64 links" link="lists.directory" 
+				<ProjectCard title="Magazine Website with RESTful Admin Panel" tech="JS, REST" link="claritatea.netlify.app/" type="images"
+							  description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
+				<ProjectCard title="Advanced TODO list" tech="JS, QR code generator, base64 links" link="lists.directory" type="images" 
 							 description="An advanced shareable todo list with QR code generation, base64 link generation, priority setting, hex input background color change." />
+				<ProjectCard title="Personal Project Blog" tech="React.js, JSX" link="louisgeorge.me"  type="images"
+							 description="A personal blog / project tracker." />
 				<button className="projects_expand_button" onClick={ () => setOpen(false) }> 
 						<img src= './assets/collapse_arrow.svg' />
 				</button>
@@ -111,10 +114,10 @@ const Projects = function() {
 			<div className="projects">
 				<ProjectCard  title="AI Dataset Marketplace and Source Control" tech="React.js, JSX" type="html" htmlname="braket.ai" filename="DatasetPage.jsx" 
 							  description="The front-end of a marketplace website that also offers tools for source-control and crowd-sourcing for the creation of new datasets." />
-				<ProjectCard title="Magazine Website with RESTful Admin Panel" tech="JS, REST" link="claritatea.netlify.app/" type="images"
-							  description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
 				<ProjectCard title="House Presentation Website" tech="JS, Three.js, Google Maps API" link='stejar.casa' type="images"
 							  description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
+				<ProjectCard title="Magazine Website with RESTful Admin Panel" tech="JS, REST" link="claritatea.netlify.app/" type="images"
+							  description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
 				<button className="projects_expand_button" onClick={ () => setOpen(true) }>
 						<img src= './assets/expand_arrow.svg' />
 				</button>
@@ -129,11 +132,11 @@ const PersonalProjects = function() {
 	return(
 		<div className="extra-projects">
 			<h3>Personal Projects</h3>
-			<ProjectCard title="SLAM with Extended Kalman Filter with Symbolic Jacobian Computation" tech="C++, OpenCV, Pangolin"
+			<ProjectCard title="SLAM with Extended Kalman Filter with Symbolic Jacobian Computation" tech="C++, OpenCV, Pangolin" type="text" tag="SLAM"
 						 description="Simultaneous Localisation and Mapping algorithm with an error-correcting extended kalman filter. It creates a 3D map from a monocular camera. Implemented to test out experimental HMDs." />
-			<ProjectCard title="Rudimentary Game Engine with Procedurally Generated Terrain" tech="C++, OpenGL, GLUT" 
+			<ProjectCard title="Rudimentary Game Engine with Procedurally Generated Terrain" tech="C++, OpenGL, GLUT"  type="text" tag="Engine"
 						 description="Game Engine C++ implementation from scratch with Perlin Noise procedurally generated terrain, .OBJ file loader, model viewer, collision detection, primitive generation, etc." />
-			<ProjectCard title="Prediction/Financial Market Simulation" tech="Python, Numpy, Scipy, Pandas" 
+			<ProjectCard title="Prediction/Financial Market Simulation" tech="Python, Numpy, Scipy, Pandas"  type="text" tag="Market"
 						 description="Simulating typical market behaviour with rational and irrational actors with stock price history datasets and potential idea market implementation with personal system trust variable" />
 		</div>
 	);
@@ -189,6 +192,7 @@ class Page extends React.Component {
 
 		return(
 			<div className="paging">
+                <ContactForm />
 				<Introduction />
 				<Projects />
 				<Experience />
@@ -201,7 +205,7 @@ class Page extends React.Component {
 																																										: this.setState({ extra: true }) }>
 						<img src={ button_src } />
 				</button>
-				<p className="footer">July 2022, Octavian Rusu</p>
+				<p className="footer">June 2022, Octavian Rusu</p>
 			</div>
 		); 
 	}

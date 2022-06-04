@@ -17,7 +17,7 @@ const Comments = function(props) {
 	var html = [];
 
 	for( const comment in sites[props.site]["tabs"][props.tab]["comments"]) {
-		html[idx] = <div className="comment">	
+		html[idx] = <div className="presentation-comment">	
 									<p> {sites[props.site]["tabs"][props.tab]["comments"][idx]["text"]} </p>
 								</div>
 		idx++;
@@ -53,7 +53,7 @@ class Tabs extends React.Component {
 			}
 
 			// iterate through comments and apply
-			var comms = document.getElementsByClassName("comment");
+			var comms = document.getElementsByClassName("presentation-comment");
 			for( let i = 0; i < comms.length; i++) {
 				const depth = depths[i] - current_depth;
 				comms[i].style.marginTop = depth + "px";
@@ -93,7 +93,7 @@ class Tabs extends React.Component {
                             }
                         } 
                         return (
-                            <div>
+                            <div className="braket-ai">
                                 {news_ui}
                             </div>
                         );
@@ -117,7 +117,6 @@ class Tabs extends React.Component {
 							</div>
 						);
 						break;
-
 				}
 			default:
 				throw "ProjectCard / HTML : Invalid HTML inject target." + site;
@@ -179,7 +178,35 @@ class Tabs extends React.Component {
 						</div>
 					</div>
 			);
-		}
+
+		} else if ( this.props.type === "text" ) {
+            // get num of paragraphs
+            var par_num = sites[this.props.tag]["par_num"];
+            var paragraphs = [];
+            for( var i = 0; i < par_num; i++) {
+               paragraphs.push( <p>{ sites[this.props.tag]["text"][i] } </p> )
+            }
+
+            if( sites[this.props.tag]["img"] === "false" ) {
+                return(
+                    <div className="expanded_about">
+                        <h3>{sites[this.props.tag]["name"]}</h3>
+                        {paragraphs}
+                    </div>
+                );
+            } else {
+                return(
+                    <div className="personal-images">
+                        <div className="personal-about">
+                            {paragraphs}
+                        </div>
+                        <div className="personal-images">
+                
+                        </div>
+                    </div>
+                );
+            }
+        }
 	}
 }
 

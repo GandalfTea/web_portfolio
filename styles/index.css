@@ -225,6 +225,7 @@ ul {
 /* Close Button */
 
 .expanded_close {
+    z-index: 3;
 	position: absolute;
 	height: 60px;
 	width: 60px;
@@ -297,9 +298,13 @@ ul {
 }
 
 
-.comment {
+.presentation-comment {
 	width: 20vw !important;	
 	margin-left: 8vw !important;
+}
+
+.braket-ai {
+    margin-top: 5vh;
 }
 
 
@@ -364,4 +369,31 @@ ul {
 	margin-top: 150px;
 	margin-bottom:50px;
 	font-weight: 700;
+}
+
+
+/*  CONTACT FORM    */
+
+.contact-form__closed {
+    position: fixed;
+    right: 7vw;
+    bottom: 5vh;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: #DDD;
+    z-index: 4;
+    cursor: pointer;
+    transition: 0.2s;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+	            0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.contact-form__closed img {
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 15px;
 }

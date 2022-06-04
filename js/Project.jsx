@@ -67,7 +67,8 @@ class ProjectCard extends React.Component {
                     <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
                         <img src="./js/imported/braket.ai/assets/close.svg" alt="exit button" />
                     </div>
-					<Tabs link={ this.props.type === "images" ? this.props.link : this.props.htmlname} type={ this.props.type }/>
+					<Tabs link={ this.props.type === "images" ? this.props.link : this.props.htmlname} 
+                          type={ this.props.type } tag={ this.props.type==="text" ? this.props.tag : null }/>
 				</div>
 			);
 

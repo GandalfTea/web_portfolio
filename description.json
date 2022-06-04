@@ -90,5 +90,101 @@
                 "description": "Below are the UI elements made for rapid dataset preview, mostly used in searches. It was engineered to give the user all the necesary information about the usefulness of a dataset in a clear and concise way. It contains pricing and licence information, data structure and preview as well as a description and user-driven upvote system."
 			}
 		}
-	}
+	},
+
+
+
+    "lists.directory" : {
+        "description": "Minimalist but powerful TODO list. Made to start typing as soon as it loads. QR Code or Base64 URL share and Local Memory Storage. The user can also change the background color from the presets at the bottom, or input a color hex code.",
+		"tabs": {
+			"0" : {
+				"name": "Landing",
+				"desktop": "./assets/listsdirectory_desktop.png",
+				"mobile": "./assets/NULL.png",
+				"numcom": "3",
+				"comments": {
+					"0": {
+						"text": "Movable tasks, with important marker.",
+						"depth": "250"
+					},
+	
+					"1": {
+						"text": "QR Code or Base64 URL Share.",
+							"depth": "550"
+					},
+
+					"2": {
+						"text": "Local storage saves.",
+						"depth": "900"
+					}
+				}	
+			}
+        }
+    },
+
+
+    "louisgeorge.me" : {
+        "description": "",
+		"tabs": {
+			"0" : {
+				"name": "Landing",
+				"desktop": "./assets/louisgeorgeme_desktop.png",
+				"mobile": "./assets/NULL.png",
+				"numcom": "3",
+				"comments": {
+					"0": {
+						"text": "Movable tasks, with important marker.",
+						"depth": "250"
+					},
+	
+					"1": {
+						"text": "QR Code or Base64 URL Share.",
+							"depth": "550"
+					},
+
+					"2": {
+						"text": "Local storage saves.",
+						"depth": "900"
+					}
+				}	
+			}
+        }
+    },
+
+    "SLAM" : {
+        "name": "SLAM with Extended Kalman Filter with Symbolic Jacobian Computation",
+        "par_num": "3",
+        "img": "false",
+        "text": {
+            "0": "Simultaneous Localization and Mapping algorithm made in C++ with an Extended Kalman filter that makes use of Symbolic Jacobian Matrices for state transitions. This is still a work in progress, so the contents of the EKF state are still variable. Since the main use of this filter is for tracking an inside environment for Extended Reality boundary-checking, it must focus mainly on rotation, but also track displacement and velocity. Because of this, the state uses a Quaternion for tracking rotation, a vector for motion and a compound Map for storing and correcting found environment features.",
+            "1": "This is part of a bigger library, named MRCV, Mixed Reality Computer Vision, currently developed by myself, that should allow users to easily experiment with DIY Head Mounted Displays or various game features without having to worry about the mathematical side of reproducible environment tracking. It is built to support either a monocular or multi-camera setup and allow the user to easily calibrate the system to their own intrinsic camera matrix. At the same time, it is lightweight, not using a lot of memory or CPU as a background process. Ideally, it should run on a Raspberry PI Zero 2, to make it as accessible to users as possible.",
+            "2" : "It makes use of OpenCV, OpenGL, Pangolin for visualization with a custom view Handler to support mouse motion rotation, and matplotlibcpp for plotting displacement and other tracked values. As of now, it uses the OpenCV Essential Matrix extractor function, ORB feature extractor and BFMatcher, but this is likely to change as the library progresses, implementing the algorithms from scratch for better optimisation."
+        }
+    },
+
+    "Engine": {
+        "name": "Rudimentary Game Engine with Procedurally Generated Terrain",
+        "par_num": "3",
+        "img": "true",
+        "text": {
+            "0": "A barebones game engine made in C++ with Procedurally Generated Terrain by Perlin Noise. It contains an .OBJ file loader for easy model loading, First Person Character, Primitive Shape Generator, 3D Model Visualiser, Collision, etc. No external libraries were used to build it, outside OpenGL. It contains personalized primitive Matrix, Vector, Quaternion and Euler Angle classes that combine into an abstract Object class, from which all in-game objects are derived. In the future, it will be able to do Procedural Terrain Destruction and Physics Simulations.",
+            "1" : "The core low-level classes have been thoroughly tested for sanity and performance. The Matrix and Vector are template classes that make use of various predefined types of certain byte depth, like U32C3, an unsigned integer of 32-bits depth with 3 channels. They are very user-friendly, the interface being something in between Eigen matrices and OpenCV matrices. There are also specialized constructors that create various rotation, translation, scaling or compound matrices. The coordinate-storing classes, Quaternion, Euler Angles and Rotation Matrices, are very easily interchangeable and have various helpers and automations that make them easy to use. The abstract Object class uses Quaternions to store rotation, but this can easily be changed.",
+            "2" : "The procedural terrain is made using Perlin Noise and Fractals to enhance realism. The noise is generated from 0 using our own vector class and a smooth-step interpolation function. As the other generated primitives, we compute collision, normals and topography for it. The resolution, scaling and other variables are left to the user, offering a lot of  degrees of freedom for how the terrain should look. For a full explanation, please check the Docs in the GitHub repo. It also contains some demos to test, compiled with CMake."
+        },
+        "images": {
+            "0": "",
+            "1": ""
+        }
+    },
+
+    "Market": {
+        "name": "Financial Market Simulation",
+        "par_num": "3",
+        "img": "false",
+        "text": {
+            "0": "A financial market simulator with a varying number of securities and agents implemented in Python using Numpy. It was initially made to test the effects and behavior of prediction markets and overall speculation-driven agents on a market user-structure. It contains a complex Command Line Interface that allows the user to change a lot of variables before running the simulation. It also allows them to set breakpoints, where the simulation automatically pauses and captures a full state snapshot for visualization. If you choose not to use the CLI, it also contains various command-line level arguments and options.",
+            "1": "It is initialized with a set number of participants that each have a random sum of money distributed in an exponential fashion, random risk tolerance variable that updates after each cycle, personal bias vector to introduce irrational behavior as well as buy and sell algorithms. Each cycle, the participants update most of the variables based on the results of the last cycle.",
+            "2": "The Market Maker algorithm is pretty straight forward, it caches and completes orders and partial orders.  The price of the order can either be set by the participant or automatically executed to the highest ( or lowest ) already existing order. The state of the market can be dumped at any point during the simulation, displaying nicely in the console window. As this program was developed on Linux, it makes use of ANSI colors and console commands to display the data in a nice user readable format, which might not work on Windows."
+        }
+    }
 }

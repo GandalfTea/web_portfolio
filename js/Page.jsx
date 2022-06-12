@@ -14,9 +14,8 @@ const Introduction = function() {
 			<img src="./assets/drawing.jpg" className="intro_image" />
 			<div>
 				<h3 className="intro__des_title">About</h3>
-				<p>Over time, systems trend towards either stagnation or over-complexity. I am to develop user experiences that constantly evolve and make use of the newest available technologies, but also keep it simple. Motivated by understanding, I dive into various fields in my free time and see how everything I learn can be linked into all of my work.</p>
-				<p>So far, the problems I have tackled and solved include creating the online presence of the Claritatea artistic magazine, designing and currently developing a dataset marketplace that allows users to crowdsource the creation and maintenance of datasets, and building a real-estate presentation website that makes use of 3D models. In my free time, I have also delved into Computer Vision, building SLAM algorithms in C++ and Python, Computer Graphics developing a game engine from scratch, and Financial Markets, developing a market simulator.</p>
-				<p><strong>GitHub</strong>: <a href="https://github.com/GandalfTea">https://github.com/GandalfTea</a></p>
+				<p>I aim to develop user experiences that constantly evolve and make use of the newest available technologies, but also keep it simple. Coming from a background of traditional art, I am experienced both in design and development. Motivated by understanding, I dive into various fields in my free time and see how everything I learn can be linked into all of my work. Just the other day I was looking at hyperdimensional space and manifolds, and <a href='https://github.com/GandalfTea/tinydim' target="_blank" >built a multi-dimensional geometric primitive visualiser</a>.</p>
+				<p>So far, the problems I have tackled and solved include creating the online presence of the Claritatea artistic magazine, designing and currently developing a dataset marketplace that allows users to crowdsource the creation and maintenance of datasets, and building a real-estate presentation website using 3D models. In my free time, I have also delved into Computer Vision, building SLAM algorithms in C++ and Python, Computer Graphics developing a game engine from scratch, and Financial Markets, developing a market simulator.</p>
 			</div>
 		</div>
 	);
@@ -82,9 +81,6 @@ const AdditionalSkills = function() {
 	)
 }
 
-				//<ProjectCard  title="Hyper-Dimensional Object Visualizer in C++ with Web Assembly" tech="C++, Web Assembly, emscripten" type="images" htmlname="TBD" filename="" 
-				//			  description="A multi-dimensional object simulator and visualiser written in C++ with OpenGL and GLUT, ported to the web using Web Assembly." />
-
 
 // Use Hook to expand and show all projects. Initially only 3.
 const Projects = function() {
@@ -93,16 +89,49 @@ const Projects = function() {
 	if(open) {
 		return (
 			<div className="projects">
-				<ProjectCard  title="AI Dataset Marketplace and Source Control" tech="React.js, JSX" type="html" htmlname="braket.ai" filename="DatasetPage.jsx" 
+
+				<ProjectCard  title="AI Dataset Marketplace and Source Control" 
+                              tech="React.js, JSX" 
+                              type="html" 
+                              htmlname="braket.ai" 
+                              filename="DatasetPage.jsx" 
+                              git="https://github.com/GandalfTea/braket.ai"
 							  description="The front-end of a marketplace website that also offers tools for source-control and crowd-sourcing for the creation of new datasets." />
-				<ProjectCard title="House Presentation Website" tech="JS, Three.js, Google Maps API" link='stejar.casa' type="images"
-							  description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
-				<ProjectCard title="Magazine Website with RESTful Admin Panel" tech="JS, REST" link="claritatea.netlify.app/" type="images"
-							  description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
-				<ProjectCard title="Advanced TODO list" tech="JS, QR code generator, base64 links" link="lists.directory" type="images" 
+
+				<ProjectCard title="House Presentation Website" 
+                             tech="JS, Three.js, JQuery, Google Maps API" 
+                             link='stejar.casa' 
+                             type="images"
+                             git="https://github.com/GandalfTea/stejar.casa"
+							 description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
+
+				<ProjectCard title="Magazine Website with RESTful Admin Panel" 
+                             tech="JS, JQuery, REST," 
+                             link="claritatea.netlify.app/" 
+                             type="images"
+                             git="https://github.com/GandalfTea/claritatea.ro"
+							 description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
+
+				<ProjectCard title="Advanced TODO list" 
+                             tech="JS, JQuery, QR code generator, base64 links" 
+                             link="lists.directory" 
+                             type="images" 
+                             git="https://github.com/GandalfTea/lists.directory"
 							 description="An advanced shareable todo list with QR code generation, base64 link generation, priority setting, hex input background color change." />
-				<ProjectCard title="Personal Project Blog" tech="React.js, JSX" link="louisgeorge.me"  type="images"
+
+				<ProjectCard  title="Hyper-Dimensional Object Visualizer in C++ with Web Assembly" 
+                              tech="C++, Web Assembly, emscripten" 
+                              type="text" 
+                              htmlname="WORK IN PROGRESS" 
+                              git="https://github.com/GandalfTea/tinydim"
+							  description="A multi-dimensional object simulator and visualiser written in C++ with OpenGL and GLUT, ported to the web using Web Assembly." />
+
+				<ProjectCard title="Personal Project Blog" 
+                             tech="React.js, JSX" 
+                             link="louisgeorge.me"  
+                             type="images"
 							 description="A personal blog / project tracker." />
+
 				<button className="projects_expand_button" onClick={ () => setOpen(false) }> 
 						<img src= './assets/collapse_arrow.svg' />
 				</button>
@@ -112,12 +141,28 @@ const Projects = function() {
 	} else {
 		return (
 			<div className="projects">
-				<ProjectCard  title="AI Dataset Marketplace and Source Control" tech="React.js, JSX" type="html" htmlname="braket.ai" filename="DatasetPage.jsx" 
+				<ProjectCard  title="AI Dataset Marketplace and Source Control" 
+                              tech="React.js, JSX" 
+                              type="html" 
+                              htmlname="braket.ai" 
+                              filename="DatasetPage.jsx" 
+                              git="https://github.com/GandalfTea/braket.ai"
 							  description="The front-end of a marketplace website that also offers tools for source-control and crowd-sourcing for the creation of new datasets." />
-				<ProjectCard title="House Presentation Website" tech="JS, Three.js, Google Maps API" link='stejar.casa' type="images"
-							  description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
-				<ProjectCard title="Magazine Website with RESTful Admin Panel" tech="JS, REST" link="claritatea.netlify.app/" type="images"
-							  description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
+
+				<ProjectCard title="House Presentation Website" 
+                             tech="JS, Three.js, JQuery, Google Maps API" 
+                             link='stejar.casa' 
+                             type="images"
+                             git="https://github.com/GandalfTea/stejar.casa"
+							 description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
+
+				<ProjectCard title="Magazine Website with RESTful Admin Panel" 
+                             tech="JS, JQuery, REST," 
+                             link="claritatea.netlify.app/" 
+                             type="images"
+                             git="https://github.com/GandalfTea/claritatea.ro"
+							 description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
+
 				<button className="projects_expand_button" onClick={ () => setOpen(true) }>
 						<img src= './assets/expand_arrow.svg' />
 				</button>
@@ -132,11 +177,25 @@ const PersonalProjects = function() {
 	return(
 		<div className="extra-projects">
 			<h3>Personal Projects</h3>
-			<ProjectCard title="SLAM with Extended Kalman Filter with Symbolic Jacobian Computation" tech="C++, OpenCV, Pangolin" type="text" tag="SLAM"
+			<ProjectCard title="SLAM with Extended Kalman Filter with Symbolic Jacobian Computation" 
+                         tech="C++, OpenCV, Pangolin" 
+                         type="text" 
+                         tag="SLAM"
+                         git="https://github.com/GandalfTea/MRCV"
 						 description="Simultaneous Localisation and Mapping algorithm with an error-correcting extended kalman filter. It creates a 3D map from a monocular camera. Implemented to test out experimental HMDs." />
-			<ProjectCard title="Rudimentary Game Engine with Procedurally Generated Terrain" tech="C++, OpenGL, GLUT"  type="text" tag="Engine"
+
+			<ProjectCard title="Rudimentary Game Engine with Procedurally Generated Terrain" 
+                         tech="C++, OpenGL, GLUT"  
+                         type="text" 
+                         tag="Engine"
+                         git="https://github.com/GandalfTea/enginehmw"
 						 description="Game Engine C++ implementation from scratch with Perlin Noise procedurally generated terrain, .OBJ file loader, model viewer, collision detection, primitive generation, etc." />
-			<ProjectCard title="Prediction/Financial Market Simulation" tech="Python, Numpy, Scipy, Pandas"  type="text" tag="Market"
+
+			<ProjectCard title="Prediction/Financial Market Simulation" 
+                         tech="Python, Numpy, Scipy, Pandas"
+                         type="text" 
+                         tag="Market"
+                         git="https://github.com/GandalfTea/slamhmw"
 						 description="Simulating typical market behaviour with rational and irrational actors with stock price history datasets and potential idea market implementation with personal system trust variable" />
 		</div>
 	);

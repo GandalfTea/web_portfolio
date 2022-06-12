@@ -15,7 +15,6 @@ class ProjectCard extends React.Component {
 			this.setState({ expand: new_state });
 	}
 
-	// Close project if the user scrolls past it
 	componentDidMount(){
         // Position close button
         window.addEventListener('scroll', this.move_close_button);
@@ -33,6 +32,9 @@ class ProjectCard extends React.Component {
             const scrolltop = window.pageYOffset; 
 
             // Start tracking
+
+            console.log( document.getElementsByClassName("expanded_close")[0]);
+
             if( scrolltop > start && scrolltop < stop ) {
                 document.getElementsByClassName("expanded_close")[0].style.transition = "0s";
                 document.getElementsByClassName("expanded_close")[0].style.top = "49vh";
@@ -61,7 +63,7 @@ class ProjectCard extends React.Component {
 	/* Expand or collapse the project card */
 	// TODO: when you expand one project, close all the other ones.
 	expand( option ) {
-		if(option) {
+		if(option && document.body.clientWidth > 1000) {
 			return(
 				<div className="project_expanded">
                     <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
@@ -72,17 +74,50 @@ class ProjectCard extends React.Component {
 				</div>
 			);
 
-		} else {
+        } else if ( option && document.body.clientWidth < 1000 ) {
+			return(
+				<div className="project_expanded__mobile">
+                    <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
+                        <img src="./js/imported/braket.ai/assets/close.svg" alt="exit button" />
+                    </div>
+				</div>
+			);
+		} else if( document.body.clientWidth > 1000){
+            // The extra div is because of some wierd fallthrough of style attributes
+            // The attributes of .expanded-close fall to the first div of the main div.
 			return (
-				<div className="project-container"
+                <div className="project">
+                    <div></div>
+                    <div className="project-container"
+                                onClick={ () => this.change_state(!this.state.expand)} >
+                        <div>
+                            <a href={"https://www." + this.props.link} target="_blank"> {this.props.link}</a>
+                            <h2> { this.props.title } </h2>
+                            <h3> { this.props.tech } </h3>
+                            <p>  { this.props.description } </p>
+                        </div>
+                    </div>
+                    <div className="project-links" onClick={ () => { window.open( this.props.git, '_blank')} } >
+                        <div className="project_link">
+                            <img src='./assets/github-link_white.svg' alt="button to github repo of project" />
+                        </div>
+                        <div className="project_link project_link_second" onClick={ () => { window.open( "http://" + this.props.link, '_blank')} } >
+                            <img src='./assets/live-link_white.svg' alt="button to live website of project" />
+                        </div>
+                    </div>
+                </div>
+			);
+		} else {
+            console.log("<");
+            return(
+				<div className="project-container__mobile project-container"
 							onClick={ () => this.change_state(!this.state.expand)} >
 					<a href={"https://www." + this.props.link} target="_blank"> {this.props.link}</a>
 					<h2> { this.props.title } </h2>
 					<h3> { this.props.tech } </h3>
-					<p>  { this.props.description } </p>
 				</div>
-			);
-		}
+            );
+        }
 	}
 
 
@@ -90,7 +125,6 @@ class ProjectCard extends React.Component {
 		return (
 			<div>
 				{ this.expand(this.state.expand) }
-				{ /*!this.state.correct_height && this.state.expand ? this.update_image_height() : "" */ }
 			</div>
 		)
 	}

@@ -15,9 +15,14 @@ body {
 	margin: auto;
 }
 
-p, h1, h2, h3 {
+p, h1, h2, h3, a{
 	font-family: "Lato";
 	line-height: 26px;
+    text-decoration: none;
+}
+
+p, h3 {
+    padding: 0px 3px;
 }
 
 ul {
@@ -42,6 +47,7 @@ ul {
 	font-size: 17px;
 	color: gray;
 	margin-top: 7px;
+    margin-left: 7px;
 }
 
 .intro_image {
@@ -87,228 +93,6 @@ ul {
 }
 
 /*	PROJECTS	*/
-
-.projects {
-	margin-top: 100px;
-}
-
-.project-container {
-	width: 100%;
-	height: auto;
-	background-color: #2F2F2F;
-	color: white;
-	border-radius: 13px;
-	padding: 40px 60px;
-	margin-top: 50px;
-	cursor: pointer;
-	transition: 0.2s;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
-	            0 2px 2px rgba(0,0,0,0.11), 
-				0 4px 4px rgba(0,0,0,0.11), 
-				0 6px 8px rgba(0,0,0,0.11),
-				0 8px 16px rgba(0,0,0,0.11);
-}
-
-.project-container a {
-	color: white;
-	font-family: "Lato";
-}
-
-
-.project-container a:hover {
-	color: #CCC ;
-}
-
-.project-container h2 {
-	font-size: 22px;
-	margin-top: 10px;
-}
-
-.project-container h3 {
-	font-size: 16px;
-	font-weight: 900;
-	margin-top: 10px;
-	color: #BBB;
-}
-
-.project-container p {
-	font-size: 16px;
-	margin-top: 15px;
-	font-weight: 300px;
-	color: #CCC;
-}
-
-.project-container:hover {
-	transition: 0.5s;
-	margin-left: 5px;
-	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
-	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
-		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
-		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
-			  	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
-			    64px 66px 80px rgba(0, 0, 0, 0.07);
-}
-
-.projects_expand_button {
-	outline: none;
-	border: none;
-	width: 100%;
-	height: 100px;
-	background-color: transparent;
-	margin-top: 50px;
-	border-radius: 13px;
-}
-
-.projects_expand_button:hover {
-	background-color: #f6f6f6;
-}
-
-.projects_expand_button img {
-	width: 50px;
-	margin: auto;
-}
-
-/*	EXPANDED CONTAINER 	*/
-
-.project_expanded {
-	width: 100vw;
-	margin-left: -100%;
-    position: relative;
-	/* transform: translate(-50%, -0%); */
-	background-color: #F6F6F6;
-	margin-top: 75px;
-	padding: 100px;
-    transition: 0.2s;
-}
-
-.expanded_restrain {
-	max-width: 1920px;
-	margin: auto;
-}
-
-
-/*	Tab Selectors*/
-.tab-selector {
-	width: 800px;
-	margin: auto;
-	margin-top: 50px;
-}
-
-.tab-selector div {
-	width: auto;
-	display: flex;
-	flex-direction: row;
-	margin-left: 50%;
-	transform: translate(-50%, 0%);
-}
-
-.tab-selector p {
-	margin-left: 50px;
-	font-weight: 700;
-	color: #888;
-	cursor: pointer;
-}
-
-.tab-selector p:hover {
-	color: #000;
-}
-
-.tab-selector p:first-of-type {
-	margin-left: 0px;
-}
-
-.tab-selected {
-	color: #000 !important;
-}
-
-
-/* Close Button */
-
-.expanded_close {
-    z-index: 3;
-	position: absolute;
-	height: 60px;
-	width: 60px;
-	border-radius: 69px;
-	background-color: #FFF;
-	margin-left: 85vw;
-    top: 50px;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
-	            0 2px 2px rgba(0,0,0,0.11), 
-				0 4px 4px rgba(0,0,0,0.11), 
-				0 6px 8px rgba(0,0,0,0.11),
-				0 8px 16px rgba(0,0,0,0.11);
-}
-
-.expanded_close:hover {
-    cursor: pointer;
-    transition: 0.2s;
-	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
-	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
-		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
-		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
-			  	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
-			    64px 66px 80px rgba(0, 0, 0, 0.07);
-}
-
-.expanded_close img {
-    height: 20px;
-    width: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-
-/* Images*/
-.expanded_images {
-	display: flex;
-	flex-direction: row;
-}
-
-.expanded_about {
-	width: 650px;
-	margin: auto;
-	text-align: justify;
-}
-
-.expanded_about p {
-	margin-top: 20px;
-}
-
-.images {
-	margin-top: 100px;
-	margin-left: 1vw;
-}
-
-.expanded_images img:first-of-type {
-	width: 35vw;
-	vertical-align: top;
-}
-
-.expanded_images img {
-	width: 9.23vw;	
-	border-radius: 13px;
-	margin-left: 5vw;
-	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
-	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
-		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
-		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
-			  	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
-			    64px 66px 80px rgba(0, 0, 0, 0.07);
-}
-
-
-.presentation-comment {
-	width: 20vw !important;	
-	margin-left: 8vw !important;
-}
-
-.braket-ai {
-    margin-top: 5vh;
-}
-
-
-
 /*	XPERIENCE	*/
 
 .volunteer,
@@ -381,7 +165,7 @@ ul {
     height: 60px;
     width: 60px;
     border-radius: 50px;
-    background-color: #DDD;
+    background-color: #2F2F2F;;
     z-index: 4;
     cursor: pointer;
     transition: 0.2s;
@@ -392,8 +176,158 @@ ul {
 				0 8px 16px rgba(0,0,0,0.11);
 }
 
+.contact-form__closed:hover {
+    right: 6.9vw;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			  	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			    64px 66px 80px rgba(0, 0, 0, 0.07);
+}
+
 .contact-form__closed img {
     height: 30px;
     margin-top: 15px;
     margin-left: 15px;
+}
+
+.contact-form__opened {
+    z-index: 4;
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+    border-radius: 13px;
+    background-color: #FFF;
+    height: 50vh;
+    width: 25vw;
+    transition: 0.2s;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+	            0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.contact-form__opened form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.contact-form__opened form input {
+    margin-top: 2vh;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 13px;
+    padding: 5px 15px;
+    background-color: #F7F7F7;
+    font-family: "Lato";
+    font-size: 14px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11) inset, 
+	            0 2px 2px rgba(0,0,0,0.11) inset, 
+				0 4px 4px rgba(0,0,0,0.11) inset; 
+}
+
+.contact-form__opened form textarea {
+    margin-top: 2vh;
+    resize: none;
+    outline: none;
+    border: none;
+    height: 20vh;
+    border-radius: 13px;
+    padding: 15px;
+    background-color: #F7F7F7;
+    font-family: "Lato";
+    font-size: 14px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11) inset, 
+	            0 2px 2px rgba(0,0,0,0.11) inset, 
+				0 4px 4px rgba(0,0,0,0.11) inset; 
+}
+
+.contact-form__opened img {
+    height: 17px;
+    position: absolute;
+    top: 2vh;
+    right: 1vw;
+    cursor: pointerl
+}
+
+.contact-submit {
+    width: 30%;
+    position: absolute;
+    right: 2vw;
+    bottom: 5vh;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+	            0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11) !important; 
+    cursor: pointer;
+}
+
+.contact-submit:hover {
+    transition: 0.2s;
+    right: 1.9vw;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			  	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			    64px 66px 80px rgba(0, 0, 0, 0.07);
+}
+
+@media only screen and ( max-width: 700px) {
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p, li {
+        font-size: 14px !important;
+        line-height: 22px !important;
+    }
+    .paging {
+        padding: 0px 30px;
+        width: 100vw;
+    }
+
+    .intro_image, 
+    .painting {
+        width: 100% !important;
+        border-radius: 15px;
+    }
+
+    .intro_image {
+        height: 50vh;
+    }
+
+    .intro_name {
+        font-size: 25px;
+        width: 170px;
+        margin-left: 50%;
+        margin-top: 10vh;
+        transform: translate(-50%, -0%);
+    }
+
+    .intro_location {
+        font-size: 15px !important;
+        margin-top: 10px;
+        width: 120px;
+        margin-left: 50%;
+        transform: translate(-50%, -0%);
+    }
+
+    .intro div p {
+        font-size: 20px;
+        
+    }
+
+
+    /*  CONTACT FORM */
+    .contact-form__opened {
+        width: 90%;
+        height: 60%;
+    }
 }

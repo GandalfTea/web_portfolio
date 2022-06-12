@@ -165,7 +165,7 @@
     "Engine": {
         "name": "Rudimentary Game Engine with Procedurally Generated Terrain",
         "par_num": "3",
-        "img": "true",
+        "img": "false",
         "text": {
             "0": "A barebones game engine made in C++ with Procedurally Generated Terrain by Perlin Noise. It contains an .OBJ file loader for easy model loading, First Person Character, Primitive Shape Generator, 3D Model Visualiser, Collision, etc. No external libraries were used to build it, outside OpenGL. It contains personalized primitive Matrix, Vector, Quaternion and Euler Angle classes that combine into an abstract Object class, from which all in-game objects are derived. In the future, it will be able to do Procedural Terrain Destruction and Physics Simulations.",
             "1" : "The core low-level classes have been thoroughly tested for sanity and performance. The Matrix and Vector are template classes that make use of various predefined types of certain byte depth, like U32C3, an unsigned integer of 32-bits depth with 3 channels. They are very user-friendly, the interface being something in between Eigen matrices and OpenCV matrices. There are also specialized constructors that create various rotation, translation, scaling or compound matrices. The coordinate-storing classes, Quaternion, Euler Angles and Rotation Matrices, are very easily interchangeable and have various helpers and automations that make them easy to use. The abstract Object class uses Quaternions to store rotation, but this can easily be changed.",

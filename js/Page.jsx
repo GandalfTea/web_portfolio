@@ -99,21 +99,21 @@ const Projects = function() {
 							  description="The front-end of a marketplace website that also offers tools for source-control and crowd-sourcing for the creation of new datasets." />
 
 				<ProjectCard title="House Presentation Website" 
-                             tech="JS, Three.js, JQuery, Google Maps API" 
+                             tech="Three.js, jQuery, Google Maps API" 
                              link='stejar.casa' 
                              type="images"
                              git="https://github.com/GandalfTea/stejar.casa"
 							 description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
 
 				<ProjectCard title="Magazine Website with RESTful Admin Panel" 
-                             tech="JS, JQuery, REST," 
+                             tech="jQuery, REST," 
                              link="claritatea.netlify.app/" 
                              type="images"
                              git="https://github.com/GandalfTea/claritatea.ro"
 							 description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
 
 				<ProjectCard title="Advanced TODO list" 
-                             tech="JS, JQuery, QR code generator, base64 links" 
+                             tech="jQuery, QR code generator, base64 links" 
                              link="lists.directory" 
                              type="images" 
                              git="https://github.com/GandalfTea/lists.directory"
@@ -150,14 +150,14 @@ const Projects = function() {
 							  description="The front-end of a marketplace website that also offers tools for source-control and crowd-sourcing for the creation of new datasets." />
 
 				<ProjectCard title="House Presentation Website" 
-                             tech="JS, Three.js, JQuery, Google Maps API" 
+                             tech="Three.js, jQuery, Google Maps API" 
                              link='stejar.casa' 
                              type="images"
                              git="https://github.com/GandalfTea/stejar.casa"
 							 description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
 
 				<ProjectCard title="Magazine Website with RESTful Admin Panel" 
-                             tech="JS, JQuery, REST," 
+                             tech="jQuery, REST," 
                              link="claritatea.netlify.app/" 
                              type="images"
                              git="https://github.com/GandalfTea/claritatea.ro"

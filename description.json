@@ -25,7 +25,15 @@
 					}
 				}
 			}
-		}
+		},
+        "name": "Magazine Website with RESTful API",
+        "par_num": "3",
+        "img": "false",
+        "text": {
+            "0": "Being responsible for the Graphic Design and Front-End Development of the Claritatea artistic magazine website and working closely with the magazine coordinators, I have created its online presence in accordance with the brand guidelines and accessibility requests. The website can be used from any device and with any browser. It showcases various visual creations submitted by the local students, allows the user to order physical copies and future contributors and sponsors to contact the representatives in a couple of clicks.",
+            "1": "The implementation was done in Vanilla JS with jQuery. It is a static website, but uses a RESTful API for the news section, editable from a password-protected sha-512 login admin panel. On every load, the user will get the latest news. The user can also sign up for the newsletter. ",
+            "2": "Because the management of the magazine has gone through some changes in the past months, they have yet to purchase the final domain for the website, claritatea.ro and it is thus hosted on netlify for the time being."
+        }
 	},
 
 
@@ -71,7 +79,15 @@
 					}
 				}	
 			}
-		}
+		},
+        "name": "House Presentation Website",
+        "par_num": "3",
+        "img": "false",
+        "text": {
+            "0": "This is a freelance contact, offering me much more freedom to work again, as both Graphic Designer and Developer. Presenting real estate in a modern way, it makes use of 3D models implemented in Three.js and detailed video breakdowns of the different levels completely furnished for clear terrain and houses visualization, giving the user a good understanding of what is being sold.",
+            "1": "The main challenge was managing the total size of the website. Storing 3 videos and a 3D model puts a strain on the load time. This was solved using lazy loading and various methods for video compression without noticeable loss of quality. The total size of the website after optimization ended up being 2 Mb initial and just over 9Mb total, down from an initial 50-60Mb.",
+            "2": "Another challenge was the construction documentation page, which contained a total of 70 images. A quick image preview and image viewer was constructed for the desktop view. For mobile devices, a separate viewing mode that tracked page scroll and automatically opened images was devised for ease of use."
+        }
 	},
 
 
@@ -89,7 +105,15 @@
 				"name": "Search",
                 "description": "Below are the UI elements made for rapid dataset preview, mostly used in searches. It was engineered to give the user all the necesary information about the usefulness of a dataset in a clear and concise way. It contains pricing and licence information, data structure and preview as well as a description and user-driven upvote system."
 			}
-		}
+		},
+        "name": "AI Dataset Marketplace and Crowd-Sourcing",
+        "par_num": "3",
+        "img": "false",
+        "text": {
+            "0": "Still a work in progress, this is one of my own personal projects. It centers around a dataset marketplace that seconds as a crowd-sourcing tool for creating and maintaining datasets. It should offer the ability to either download a new dataset filetype or simply access the data from the server remotely, voiding the need to store it on the client computer. To allow for this, it contains both a Command Line Interface and an API.",
+            "1": "As of now, elements of the main website have been created, mainly the logged in landing page, search result page and dataset presentation page. Built in React.js and JSX, the components are built around JSON data files and are thus modular for any incoming data from the server. ",
+            "2": "Extensive attention has been given to the UI and UX elements, optimizing for ease of use and easy information transmission. The full UX framework was applied while building, doing user testing, persona building, accessibility checks, etc."
+        }
 	},
 
 
@@ -119,6 +143,13 @@
 					}
 				}	
 			}
+        },
+        "name": "Minimalist TODO List",
+        "par_num": "2",
+        "img": "false",
+        "text": {
+            "0": "A streamlined minimalist to do list website with QR or Base64 link share. This is another personal project stemming from the need of a quick access link and start typing website. The created list can be saved in browser local memory for later access, or sent over to other devices by simply scaling the generated QR code with a smartphone camera. If this is unavailable, there is also the generated base64 variable link that can be sent over any text messenger.",
+            "1": "Because I am probably the main user of this website, I have optimized it for myself. It makes use of  keyboard shortcuts and other small tools to speed up the flow. While coding, I can create a todo list in a matter of seconds."
         }
     },
 
@@ -150,6 +181,17 @@
 			}
         }
     },
+
+    "4D" : {
+        "name": "",
+        "par_num": "2",
+        "img": "false",
+        "text": {
+            "0": "Another personal project, this one showcases the speed of my learning and the various interests and the innate curiosity that follows all of my work. Following discussions with my Physicist housemates about the nature of space, we have arrived at a standstill because our understanding of 4 dimensional space was lacking. Upon research, we found no visualization worthy of thought. Because of this, we took it upon ourselves to devise a way of visualizing 4D in a more realistic way. Using the same tools as Minkowsky spacetime in General Relativity, I coded a C++ OpenGL visualizer and devised projective transformations that allow us to view 4D in various ways.",
+            "1": "To allow for ease of use, without CMake and a terminal, I transcompiled it with emscripten for use with Web Assembly as a website."
+        }
+    },
+
 
     "SLAM" : {
         "name": "SLAM with Extended Kalman Filter with Symbolic Jacobian Computation",

@@ -17,7 +17,7 @@ class ProjectCard extends React.Component {
 
 	componentDidMount(){
         // Position close button
-        window.addEventListener('scroll', this.move_close_button);
+        if( document.body.clientWidth > 700) window.addEventListener('scroll', this.move_close_button);
 
 	}
 
@@ -32,8 +32,6 @@ class ProjectCard extends React.Component {
             const scrolltop = window.pageYOffset; 
 
             // Start tracking
-
-            console.log( document.getElementsByClassName("expanded_close")[0]);
 
             if( scrolltop > start && scrolltop < stop ) {
                 document.getElementsByClassName("expanded_close")[0].style.transition = "0s";
@@ -63,7 +61,7 @@ class ProjectCard extends React.Component {
 	/* Expand or collapse the project card */
 	// TODO: when you expand one project, close all the other ones.
 	expand( option ) {
-		if(option && document.body.clientWidth > 1000) {
+		if(option && document.body.clientWidth > 700) {
 			return(
 				<div className="project_expanded">
                     <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
@@ -74,15 +72,15 @@ class ProjectCard extends React.Component {
 				</div>
 			);
 
-        } else if ( option && document.body.clientWidth < 1000 ) {
+        } else if ( option && document.body.clientWidth < 700 ) {
 			return(
 				<div className="project_expanded__mobile">
-                    <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
-                        <img src="./js/imported/braket.ai/assets/close.svg" alt="exit button" />
-                    </div>
+					<Tabs tag={ this.props.type === "images" ? this.props.link : this.props.htmlname} 
+                          type="text" 
+                          mobile="true" />
 				</div>
 			);
-		} else if( document.body.clientWidth > 1000){
+		} else if( document.body.clientWidth > 700){
             // The extra div is because of some wierd fallthrough of style attributes
             // The attributes of .expanded-close fall to the first div of the main div.
 			return (

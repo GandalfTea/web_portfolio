@@ -35,6 +35,8 @@
 
 .project-container__mobile {
     padding: 30px 40px;
+    width: 100%;
+    margin-top: 30px;
 }
 
 .project-container__mobile a,
@@ -107,15 +109,17 @@
 }
 
 
+
 /*      LINK BUTTONS     */
 
 .project-links {
     transition: 0.5s;
     display: none;
+    width: 0px;
 }
 
 .project_link {
-    width: 3vw;
+    width: 50px;
     height: 45%;
     background-color: #2f2f2f;
     border-radius: 13px;
@@ -126,16 +130,29 @@
                   0 4px 4px rgba(0,0,0,0.11), 
                   0 6px 8px rgba(0,0,0,0.11),
                   0 8px 16px rgba(0,0,0,0.11);
-    left: 50%;
+    left: 1vw;
 }
 
 .project_link img {
-    margin-top: 60%;
-    margin-left: 0.9vw;
+    height: 25px;
+    width: 30px;
+    position: relative;
+    top: calc( (100% - 25px)/2);
+    left: calc( (50px - 30px)/2);
 }
 
 .project_link_second {
     top: 10%;
+}
+
+.project_link:hover {
+    transition: 0.2s;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			  	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			    64px 66px 80px rgba(0, 0, 0, 0.07);
 }
 
 
@@ -153,13 +170,23 @@
 
 .project_expanded {
 	width: 100vw;
-	margin-left: -100%;
     position: relative;
-	/* transform: translate(-50%, -0%); */
+	left: calc( (-100vw - -650px) / 2 );
+
 	background-color: #F6F6F6;
 	margin-top: 75px;
 	padding: 100px;
     transition: 0.2s;
+}
+
+.project_expanded__mobile {
+    width: 100vw;
+    position: relative;
+    left: calc( (-100vw - -100%)/2);
+
+    background-color: #F6F6F6;
+	margin-top: 75px;
+	padding: 50px;
 }
 
 .expanded_restrain {
@@ -252,8 +279,14 @@
 	text-align: justify;
 }
 
+.expanded_about__mobile p,
 .expanded_about p {
 	margin-top: 20px;
+}
+
+.expanded_about__mobile {
+    margin: auto;
+    text-align: justify;
 }
 
 .images {

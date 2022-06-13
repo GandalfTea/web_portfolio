@@ -189,7 +189,7 @@ class Tabs extends React.Component {
 
             if( sites[this.props.tag]["img"] === "false" ) {
                 return(
-                    <div className="expanded_about">
+                    <div className={ (this.props.mobile == "true" ) ? "expanded_about__mobile" : "expanded_about" } >
                         <h3>{sites[this.props.tag]["name"]}</h3>
                         {paragraphs}
                     </div>

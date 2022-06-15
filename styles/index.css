@@ -42,12 +42,17 @@ ul {
 	margin-top: 200px;
 }
 
+.intro_name a {
+    color: black;
+}
+
+
 .intro_location {
 	font-weight: 500;
 	font-size: 17px;
-	color: gray;
+	color: #757575;
 	margin-top: 7px;
-    margin-left: 7px;
+    margin-left: 5px;
 }
 
 .intro_image {
@@ -77,22 +82,23 @@ ul {
 }
 
 .intro__des_title {
-	margin-botom: 20px;
+	margin-bottom: 20px;
+    font-size: 22px;
 }
 
 .intro div {
 	margin-top: 100px;
 }
 
+.intro div a,
 .intro div p {
-	font-size: 16px;
-	font-family: "Helvetica";
+	font-size: 17px;
+	font-family: "Lato";
 	text-align: justify;
 	margin-top: 20px;
 	line-height: 26px;
 }
 
-/*	PROJECTS	*/
 /*	XPERIENCE	*/
 
 .volunteer,
@@ -187,9 +193,9 @@ ul {
 }
 
 .contact-form__closed img {
-    height: 30px;
-    margin-top: 15px;
-    margin-left: 15px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 16px;
 }
 
 .contact-form__opened {

@@ -9,13 +9,13 @@ import ContactForm from './Contact.jsx';
 const Introduction = function() {
 	return (
 		<div className="intro">
-			<h1 className="intro_name">Octavian Rusu</h1>
-			<p className="intro_location">Toronto, Canada</p>
-			<img src="./assets/drawing.jpg" className="intro_image" />
+			<h1 className="intro_name"><a href="https://github.com/GandalfTea" target="_blank" aria-label="GitHub">Octavian Rusu</a></h1>
+			<p className="intro_location"><b>Toronto, Canada</b></p>
+			<img src="./assets/drawing.jpg" className="intro_image" alt="introduction painting" />
 			<div>
-				<h3 className="intro__des_title">About</h3>
-				<p>I am an aspiring Front-End Developer. Having an obsessive personality, I am unwilling to stop working until a satisfying solution is found. With an ability to extract and learn  information  at  an  impressive  rate,  I  often  sink  deep  into  <a href="https://github.com/GandalfTea/Relativity" target="_blank">various  fields  of  study</a>  and  like  to  test  my  knowledge and understanding using one of the many tools available in my toolset. I am motivated by understanding, take that as my <a href="https://www.youtube.com/watch?v=vXrpFxHfppI&ab_channel=KingCrimson" target="_blank">epitaph</a>. I am proficient  in C++, Python, CSS, HTML, JavaScript, and  extended  frameworks,  source  control  tools  like  Git  and  GitHub  and  various  Linux  distros. I can work without a GUI or IDE, through SSH and X11.</p>
-				<p>So far, the problems I have tackled and solved include creating the online presence of the Claritatea artistic magazine, designing and currently developing a dataset marketplace that allows users to crowdsource the creation and maintenance of datasets, and building a real-estate presentation website using 3D models. In my free time, I have also delved into Computer Vision, building SLAM algorithms in C++ and Python, Computer Graphics developing a game engine from scratch, and Financial Markets, developing a market simulator.</p>
+				<h2 className="intro__des_title">About</h2>
+				<p>I am an aspiring Front-End Developer. With an ability to extract and learn  information at a fast rate,  I  often  sink  deep  into various  fields  of  study  and  like  to  <a href="https://github.com/GandalfTea/enginehmw" target="_blank" aria-label="link towards game engine">test  my  knowledge and understanding</a> by creating. <a href="https://en.wikipedia.org/wiki/Richard_Feynman" target="_blank" aria-label="Richard Feynman Quote"><i>What I cannot create I do not understand</i></a>. Having an obsessive personality, I am unwilling to stop working until a satisfying solution is found. I am motivated by understanding, take that as my <a href="https://www.youtube.com/watch?v=vXrpFxHfppI&ab_channel=KingCrimson" target="_blank" aria-label="link towards King Crimson - Epitaph">epitaph</a>.</p>
+				<p>Working freelance, I have developed and designed a magazine website and real estate presentation websites. Personally, I am working towards a Dataset Marketplace for crowd-sourcing the creationg and maintenance of datasets. In my free time, I have also delved into Computer Vision, building SLAM algorithms in C++ and Python, Computer Graphics developing a game engine from scratch, and Financial Markets, developing a market simulator.</p>
 			</div>
 		</div>
 	);
@@ -34,10 +34,9 @@ const Experience = function() {
 	return(
 		<div className="experience">
 			<h3>Work Experience</h3>
-            <TimeEntry start="2022" until="" title="Front End Developer and Designer" description="freelance, in the process of building louisgeorge.me." />
+            <TimeEntry start="2020" until="2022" title="Front End Developer and Graphic Designer" description=", freelance" />
 			<TimeEntry start="2019" until="2021" title="Front End Developer and Graphic Designer" description=", Octav Bancila Highschool, designed and built the magazine website claritatea.ro, designed two volumes of the Claritatea magazine and one volume of the ArtEast magazine." />
-			<TimeEntry start="2020" until="" title="Front End Developer and Designer" description="freelance, built house presentation website stejar.casa" />
-			<TimeEntry start="2019" until="" title="Graphic Designer" description="for Octav Bancila Highschool and Mihail Sturdza Emergency Situations Inspectorate, Iasi, Romania" />
+			<TimeEntry start="2019" until="" title="Graphic Designer" description="for Mihail Sturdza Emergency Situations Inspectorate, Iasi, Romania" />
 			<TimeEntry start="2018" until="2019" title="Graphic Designer" description="for the Erasmus+ program My City, My Home, My Responsibility" />
 		</div>
 	)
@@ -122,7 +121,7 @@ const Projects = function() {
 				<ProjectCard  title="Hyper-Dimensional Object Visualizer in C++ with Web Assembly" 
                               tech="C++, Web Assembly, emscripten" 
                               type="text" 
-                              htmlname="WORK IN PROGRESS" 
+                              tag="4D" 
                               git="https://github.com/GandalfTea/tinydim"
 							  description="A multi-dimensional object simulator and visualiser written in C++ with OpenGL and GLUT, ported to the web using Web Assembly." />
 
@@ -132,8 +131,8 @@ const Projects = function() {
                              type="images"
 							 description="A personal blog / project tracker." />
 
-				<button className="projects_expand_button" onClick={ () => setOpen(false) }> 
-						<img src= './assets/collapse_arrow.svg' />
+				<button className="projects_expand_button" onClick={ () => setOpen(false) } aria-label="expand"> 
+						<img src= './assets/collapse_arrow.svg' alt="expand button" />
 				</button>
 			</div>
 		);
@@ -163,8 +162,8 @@ const Projects = function() {
                              git="https://github.com/GandalfTea/claritatea.ro"
 							 description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
 
-				<button className="projects_expand_button" onClick={ () => setOpen(true) }>
-						<img src= './assets/expand_arrow.svg' />
+				<button className="projects_expand_button" onClick={ () => setOpen(true) } aria-label="expand">
+						<img src= './assets/expand_arrow.svg' alt="close expanded projects" />
 				</button>
 			</div>
 		);
@@ -260,9 +259,8 @@ class Page extends React.Component {
 				<PersonalProjects />
 				{ this.state.extra ? <Voluntary /> : null }
 				{ this.state.extra ? <Paintings /> : null }
-				<button className="projects_expand_button" onClick={ () => this.state.extra ? this.setState({ extra: false }) 
-																																										: this.setState({ extra: true }) }>
-						<img src={ button_src } />
+				<button className="projects_expand_button" onClick={ () => this.state.extra ? this.setState({ extra: false }): this.setState({ extra: true }) } aria-label="expand">
+						<img src={ button_src } alt="more information" />
 				</button>
 				<p className="footer">June 2022, Octavian Rusu</p>
 			</div>

@@ -75,7 +75,7 @@ class ProjectCard extends React.Component {
         } else if ( option && document.body.clientWidth < 700 ) {
 			return(
 				<div className="project_expanded__mobile">
-					<Tabs tag={ this.props.type === "images" ? this.props.link : this.props.htmlname} 
+					<Tabs tag={ this.props.type === "text" ? this.props.tag : (this.props.type==="images") ? this.props.link : this.props.htmlname} 
                           type="text" 
                           mobile="true" />
 				</div>
@@ -89,17 +89,18 @@ class ProjectCard extends React.Component {
                     <div className="project-container"
                                 onClick={ () => this.change_state(!this.state.expand)} >
                         <div>
-                            <a href={"https://www." + this.props.link} target="_blank"> {this.props.link}</a>
+                            <a href={"https://www." + this.props.link} target="_blank" aria-label="link towards live project site"> {this.props.link}</a>
                             <h2> { this.props.title } </h2>
                             <h3> { this.props.tech } </h3>
                             <p>  { this.props.description } </p>
                         </div>
                     </div>
-                    <div className="project-links" onClick={ () => { window.open( this.props.git, '_blank')} } >
-                        <div className="project_link">
+                    <div className="project-links">
+                        <div className="project_link" onClick={ () => { window.open( this.props.git, '_blank')} } >
                             <img src='./assets/github-link_white.svg' alt="button to github repo of project" />
                         </div>
-                        <div className="project_link project_link_second" onClick={ () => { window.open( "http://" + this.props.link, '_blank')} } >
+                        <div className={ (this.props.link != null) ? "project_link project_link_second" : "project_link__unavailable project_link_second" } 
+                             onClick={ (this.props.link != null) ? () => { window.open( "http://" + this.props.link, '_blank')} : null } >
                             <img src='./assets/live-link_white.svg' alt="button to live website of project" />
                         </div>
                     </div>
@@ -110,7 +111,7 @@ class ProjectCard extends React.Component {
             return(
 				<div className="project-container__mobile project-container"
 							onClick={ () => this.change_state(!this.state.expand)} >
-					<a href={"https://www." + this.props.link} target="_blank"> {this.props.link}</a>
+					<a href={"https://www." + this.props.link} target="_blank" aria-label="link towards live project site"> {this.props.link}</a>
 					<h2> { this.props.title } </h2>
 					<h3> { this.props.tech } </h3>
 				</div>

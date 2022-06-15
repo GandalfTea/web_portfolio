@@ -183,11 +183,11 @@
     },
 
     "4D" : {
-        "name": "",
+        "name": "Hyperdimensional Object Visualizer",
         "par_num": "2",
         "img": "false",
         "text": {
-            "0": "Another personal project, this one showcases the speed of my learning and the various interests and the innate curiosity that follows all of my work. Following discussions with my Physicist housemates about the nature of space, we have arrived at a standstill because our understanding of 4 dimensional space was lacking. Upon research, we found no visualization worthy of thought. Because of this, we took it upon ourselves to devise a way of visualizing 4D in a more realistic way. Using the same tools as Minkowsky spacetime in General Relativity, I coded a C++ OpenGL visualizer and devised projective transformations that allow us to view 4D in various ways.",
+            "0": "Another personal project, this one showcases the speed of my learning and the various interests and the innate curiosity that follows all of my work. Following discussions with my Physicist housemates about the nature of space, we have arrived at a standstill because our understanding of 4 dimensional space was lacking. Upon research, we found no visualization worthy of thought. Because of this, we took it upon ourselves to devise a way of visualizing 4D in a more realistic way. Using the same tools as Minkowski spacetime in General Relativity, I coded a C++ OpenGL visualizer and devised projective transformations that allow us to view 4D in various ways.",
             "1": "To allow for ease of use, without CMake and a terminal, I transcompiled it with emscripten for use with Web Assembly as a website."
         }
     },

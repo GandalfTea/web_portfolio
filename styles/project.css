@@ -118,6 +118,7 @@
     width: 0px;
 }
 
+.project_link__unavailable,
 .project_link {
     width: 50px;
     height: 45%;
@@ -133,6 +134,7 @@
     left: 1vw;
 }
 
+.project_link__unavailable img,
 .project_link img {
     height: 25px;
     width: 30px;
@@ -143,6 +145,11 @@
 
 .project_link_second {
     top: 10%;
+}
+
+.project_link__unavailable {
+    cursor: default;
+    background-color: #6f6f6f;
 }
 
 .project_link:hover {

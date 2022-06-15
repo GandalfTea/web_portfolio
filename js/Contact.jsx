@@ -30,7 +30,7 @@ class ContactForm extends React.Component {
         } else {
             return(
                 <div className="contact-form__closed" onClick={ () => this.change_state( !this.state.opened )} >
-                    <img src='./assets/contact.png' alt="Contact Form Image" />
+                    <img src='./assets/contact.svg' alt="Contact Form Image" />
                 </div>
             );
         }

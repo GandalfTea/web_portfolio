@@ -1,6 +1,6 @@
 {
 	"claritatea.netlify.app/": {
-		"description": "Magazine website presenting the newest issues, live updates, physical copy order and newsletter. Implemented using vanilla JS. It contains a password-protected admin pannel that allows the magazine creators to update the website without scripting knowledge. Github: https://github.com/GandalfTea/claritatea.ro",
+		"description": "Being responsible for the Graphic Design and Front-End Development of the Claritatea artistic magazine website and working closely with the magazine coordinators, I have created its online presence in accordance with the brand guidelines and accessibility requests. The website can be used from any device and with any browser. It showcases various visual creations submitted by the local students, allows the user to order physical copies and future contributors and sponsors to contact the representatives in a couple of clicks. The implementation was done in Vanilla JS with jQuery. It is a static website, but uses a RESTful API for the news section, editable from a password-protected SHA-512 login admin panel. On every load, the user will get the latest news. The user can also sign up for the newsletter.",
 		"tabs": {
 			"0": {
 				"name": "Landing",
@@ -38,7 +38,7 @@
 
 
 	"stejar.casa": {
-		"description": "House presentation website done for private client. It extensive use of videos, a 3D Terrain and House placement model made with Three.js and a Google Maps API embeded easy localisation. It also contains a detailed construction album page that separates each step of construction with a brief description and a set of site pictures.",
+		"description": "This is a freelance contact, working as both Graphic Designer and Developer. Presenting real estate in a modern way, it makes use of 3D models implemented in Three.js and detailed video breakdowns of the different levels completely furnished for clear terrain and houses visualization, giving the user a good understanding of what is being sold. The main challenge was managing the total size of the website. This was solved using lazy loading and various methods for video compression without noticeable loss of quality. The total size of the website after optimization ended up being 2 Mb initial and just over 9Mb total, down from an initial 50-60Mb. Another challenge was the construction documentation page, which contained a total of 70 images. A quick image preview and image viewer was constructed for the desktop view. For mobile devices, a separate viewing mode that tracked page scroll and automatically opened images was devised for ease of use.",
 		"tabs": {
 			"0" : {
 				"name": "Landing",
@@ -95,15 +95,15 @@
 		"tabs": {
 			"0": {
 				"name": "Dataset Presentation",
-                "description": "This project is still in it's initial prototype phase. Dataset Maeketplace with Source Control. Below is the UI design, built in React.js, for the dataset presentation page. It was designed to easily convey to the user quickly if the dataset is useful for one's situation. It does this with a short description, a longer README type description where the creators can go in depth, a data format and snippet visualiser, a code section that highlightes popular code that uses the dataset in question for a practical demo of use cases, an Issues section to highlight what contributors should work towards and a Discussion section for public forum-like discussion. While just a demo for now, in the future, users shall be able to simply copy the CDN URL present on the dataset card and paste it into a CLI console interface for quick and easy remote access to the dataset, voiding the need for a full download. The right side panel contains basic information, as well as credit, sources and tags."
+                "description": "Still a work in progress, this is one of my own personal projects. It centers around a dataset marketplace that seconds as a crowd-sourcing tool for creating and maintaining datasets. It should offer the ability to either download a new dataset filetype or simply access the data from the server remotely, voiding the need to store it on the client computer. To allow for this, it contains both a Command Line Interface and an API. Below is the dataset presentation page, written in React.js and JSX. The modular react components center around a JSON file that should be received from the server."
 			},
 			"1": {
 				"name": "Landing",
-                "description" : "Below are a couple of UI elements for a logged in Landing page, the notifications for a returning user. In order, they are a Contribution Update Notification, for open-source dataset contributions, much like GitHub pull requests, a Private Message Notification, a Message Reply Notification, built with a recursive function that is invariant to the number of replies or their level, and finally a Contribution Request Notification, made for dataset admins to request each contributor to update a certain number of entries by a certain deadline."
+         "description" : "Below are a couple of UI elements for a logged in Landing page, the notifications for a returning user. The Message Reply Notification is built with a recursive function that is invariant to the number of replies or their level."
 			},
 			"2": {
 				"name": "Search",
-                "description": "Below are the UI elements made for rapid dataset preview, mostly used in searches. It was engineered to give the user all the necesary information about the usefulness of a dataset in a clear and concise way. It contains pricing and licence information, data structure and preview as well as a description and user-driven upvote system."
+        "description": "Below are the UI elements made for rapid dataset preview, mostly used in searches. It was designed to give the user all the necessary information about the usefulness of a dataset in a clear and concise way."
 			}
 		},
         "name": "AI Dataset Marketplace and Crowd-Sourcing",
@@ -119,7 +119,7 @@
 
 
     "lists.directory" : {
-        "description": "Minimalist but powerful TODO list. Made to start typing as soon as it loads. QR Code or Base64 URL share and Local Memory Storage. The user can also change the background color from the presets at the bottom, or input a color hex code.",
+        "description": "A streamlined minimalist to do list website with QR or Base64 link share. This is another personal project stemming from the need of a quick load and start typing website. The created list can be saved in browser local memory for later access or sent over to other devices by simply scanning the generated QR code with a smartphone camera. If this is unavailable, there is also the generated base64 variable link that can be sent over any text messenger.",
 		"tabs": {
 			"0" : {
 				"name": "Landing",
@@ -148,7 +148,7 @@
         "par_num": "2",
         "img": "false",
         "text": {
-            "0": "A streamlined minimalist to do list website with QR or Base64 link share. This is another personal project stemming from the need of a quick access link and start typing website. The created list can be saved in browser local memory for later access, or sent over to other devices by simply scaling the generated QR code with a smartphone camera. If this is unavailable, there is also the generated base64 variable link that can be sent over any text messenger.",
+            "0": "A streamlined minimalist to do list website with QR or Base64 link share. This is another personal project stemming from the need of a quick load and start typing website. The created list can be saved in browser local memory for later access or sent over to other devices by simply scanning the generated QR code with a smartphone camera. If this is unavailable, there is also the generated base64 variable link that can be sent over any text messenger.",
             "1": "Because I am probably the main user of this website, I have optimized it for myself. It makes use of  keyboard shortcuts and other small tools to speed up the flow. While coding, I can create a todo list in a matter of seconds."
         }
     },

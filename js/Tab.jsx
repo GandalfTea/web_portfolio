@@ -5,6 +5,7 @@ import sites from '../description.json';
 import search_data from './imported/search-result.json';
 
 // HTML inject imports
+// TODO: Lazy Load these
 import DatasetPage from './imported/braket.ai/DatasetPage.jsx';
 import DatasetSearchCard from './imported/braket.ai/DatasetSearchCard.jsx';
 import { Entry, news, CommentPrompt, MessagePrompt, Notification, RequestPrompt, ContributionUpdate, Challange } from './imported/braket.ai/landing.jsx';

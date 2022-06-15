@@ -282,6 +282,8 @@
 
 .expanded_about {
 	width: 650px;
+	min-height: 230px;
+	height: auto;
 	margin: auto;
 	text-align: justify;
 }

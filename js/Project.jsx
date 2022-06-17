@@ -6,19 +6,44 @@ import Tabs from './Tab.jsx';
 class ProjectCard extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { expand: false, pending_closure: false };
+        
+		this.state = { expand: false, pending_closure: false, res: "Normal", html_res:"Normal" };
 		this.expand = this.expand.bind(this);
         this.move_close_button = this.move_close_button.bind(this);
 	}
 
-	change_state( new_state) {
+	change_state_expand( new_state ) {
 			this.setState({ expand: new_state });
 	}
 
-	componentDidMount(){
-        // Position close button
-        if( document.body.clientWidth > 700) window.addEventListener('scroll', this.move_close_button);
+    change_state_responsive( new_state ) {
+        this.setState({ res: new_state });
+    }
 
+	componentDidMount(){
+        // Initial width
+        if( document.body.clientWidth < 700) { this.change_state_responsive("Mobile"); } else
+        if( document.body.clientWidth < 1200) { this.change_state_responsive("Text"); } else
+        if( document.body.clientWidth > 1200) { this.change_state_responsive("Normal"); } 
+
+        if( document.body.clientWidth < 700)  { this.setState({ html_res: "Mobile"}) } else
+        if( document.body.clientWidth < 1500) { this.setState({ html_res: "Text"}); } else
+        if( document.body.clientWidth > 1500) { this.setState({ html_res: "Normal"}); } 
+
+        // Position close button
+        if( this.state.res == "Normal" || this.state.res == "Text") window.addEventListener('scroll', this.move_close_button);
+
+        window.addEventListener('resize', (event) => {
+            // Note:  If is faster than switch
+            if( document.body.clientWidth < 700) { this.change_state_responsive("Mobile"); } else
+            if( document.body.clientWidth < 1200) { this.change_state_responsive("Text"); } else
+            if( document.body.clientWidth > 1200) { this.change_state_responsive("Normal"); } 
+
+            if( document.body.clientWidth < 700)  { this.setState({ html_res: "Mobile"}) } else
+            if( document.body.clientWidth < 1500) { this.setState({ html_res: "Text"}); } else
+            if( document.body.clientWidth > 1500) { this.setState({ html_res: "Normal"}); }
+
+        }, true);
 	}
 
     componentWillUnmount() {
@@ -55,13 +80,36 @@ class ProjectCard extends React.Component {
     close_expanded_project() {
         const destination = document.getElementsByClassName("project_expanded")[0].offsetTop - window.innerHeight/2 + 50; 
         window.scrollTo( {top: destination} );
-        this.change_state(false);
+        this.change_state_expand(false);
     }
 
 	/* Expand or collapse the project card */
-	// TODO: when you expand one project, close all the other ones.
 	expand( option ) {
-		if(option && document.body.clientWidth > 700) {
+
+        if( this.props.type == "html") {
+            if (option && this.state.html_res == "Text") {
+                return(
+                    <div className="project_expanded">
+                        <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
+                            <img src="./js/imported/braket.ai/assets/close.svg" alt="exit button" />
+                        </div>
+                        <Tabs tag={ this.props.type === "text" ? this.props.tag : (this.props.type==="images") ? this.props.link : this.props.htmlname} 
+                              type="text" />
+                    </div>
+                );
+            } else if (option && this.state.html_res == "Mobile") {
+                return(
+                    <div className="project_expanded__mobile">
+                        <Tabs tag={ this.props.type === "text" ? this.props.tag : (this.props.type==="images") ? this.props.link : this.props.htmlname} 
+                              type="text" 
+                              mobile="true" />
+                    </div>
+                );
+            }
+        }
+
+        // Normal Open Projects
+		if(option && this.state.res == "Normal") {
 			return(
 				<div className="project_expanded">
                     <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
@@ -72,7 +120,20 @@ class ProjectCard extends React.Component {
 				</div>
 			);
 
-        } else if ( option && document.body.clientWidth < 700 ) {
+        // Middle Open Text Projects
+        } else if ( option && this.state.res == "Text") {
+            return(
+				<div className="project_expanded">
+                    <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
+                        <img src="./js/imported/braket.ai/assets/close.svg" alt="exit button" />
+                    </div>
+					<Tabs tag={ this.props.type === "text" ? this.props.tag : (this.props.type==="images") ? this.props.link : this.props.htmlname} 
+                          type="text" />
+				</div>
+            );
+
+        // Mobile Open Projects
+        } else if ( option && this.state.res == "Mobile") {
 			return(
 				<div className="project_expanded__mobile">
 					<Tabs tag={ this.props.type === "text" ? this.props.tag : (this.props.type==="images") ? this.props.link : this.props.htmlname} 
@@ -80,14 +141,15 @@ class ProjectCard extends React.Component {
                           mobile="true" />
 				</div>
 			);
-		} else if( document.body.clientWidth > 700){
+        // Normal Collapsed Projects
+		} else if( this.state.res == "Normal" || this.state.res == "Text" ){
             // The extra div is because of some wierd fallthrough of style attributes
             // The attributes of .expanded-close fall to the first div of the main div.
 			return (
                 <div className="project">
                     <div></div>
                     <div className="project-container"
-                                onClick={ () => this.change_state(!this.state.expand)} >
+                                onClick={ () => this.change_state_expand(!this.state.expand)} >
                         <div>
                             <a href={"https://www." + this.props.link} target="_blank" aria-label="link towards live project site"> {this.props.link}</a>
                             <h2> { this.props.title } </h2>
@@ -106,11 +168,11 @@ class ProjectCard extends React.Component {
                     </div>
                 </div>
 			);
+        // Mobile Collapsed Projects
 		} else {
-            console.log("<");
             return(
 				<div className="project-container__mobile project-container"
-							onClick={ () => this.change_state(!this.state.expand)} >
+							onClick={ () => this.change_state_expand(!this.state.expand)} >
 					<a href={"https://www." + this.props.link} target="_blank" aria-label="link towards live project site"> {this.props.link}</a>
 					<h2> { this.props.title } </h2>
 					<h3> { this.props.tech } </h3>

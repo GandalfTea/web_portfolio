@@ -11,7 +11,6 @@ class DatasetCard extends React.Component {
   // is object because I want to live update the upvotes
 
   render() {
-    console.log(this.props.upvotes);
     const address = [];
     const raddress = this.props.raddress.split(' / ');
     for (const element in raddress) {

@@ -298,6 +298,10 @@
     text-align: justify;
 }
 
+.expanded_about__mobile h3 {
+    text-align: left;
+}
+
 .images {
 	margin-top: 100px;
 	margin-left: 1vw;

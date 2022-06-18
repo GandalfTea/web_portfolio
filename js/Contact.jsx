@@ -17,11 +17,11 @@ class ContactForm extends React.Component {
             // Email, Subject, Message
             return(
                 <div className="contact-form__opened">
-                    <form name='contact' method='POST'>
+                    <form name='contact' netlify>
                         <input type="email" placeholder="Email" />
                         <input type='text' placeholder="Subject" />
                         <textarea name="message" placeholder="Feel free to send me any message." />
-                        <input type="submit" className="contact-submit"/>
+                        <button type="submit" className="contact-submit"> Send </button>
                     </form>
                     <img src='./assets/close.svg' alt="Opened Contact Form Close Button" onClick = { () => this.change_state( !this.state.opened )} /> 
                 </div>

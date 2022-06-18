@@ -17,7 +17,7 @@ class ContactForm extends React.Component {
             // Email, Subject, Message
             return(
                 <div className="contact-form__opened">
-                    <form name='contact' netlify>
+                    <form name='contact' data-netlify="true">
                         <input type="email" placeholder="Email" />
                         <input type='text' placeholder="Subject" />
                         <textarea name="message" placeholder="Feel free to send me any message." />

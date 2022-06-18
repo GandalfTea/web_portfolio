@@ -5,6 +5,18 @@ import { render } from 'react-dom';
 import ProjectCard from './Project.jsx';
 import ContactForm from './Contact.jsx';
 
+// Present this website in console
+
+console.log(`
+      _._     _,-'""\-.
+     (,-.\`.,'(       |\`-/|
+         \`-.-' \ )-\`( , o o)
+               \`-    \`_\`"'-`);
+
+console.log("\n\nLastly, there is this website, built in React.js with JSX.");
+console.log("Find the code at: https://github.com/GandalfTea/web_portfolio");
+console.log(".............................................................");
+
 
 const Introduction = function() {
 	return (

@@ -135,7 +135,6 @@ class Tabs extends React.Component {
 
 	change_tab( tab_num ) {
 		this.setState({ tab: tab_num });
-		console.log(this.state.tab)
 	}
 
 

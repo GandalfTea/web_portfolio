@@ -263,10 +263,14 @@ ul {
 }
 
 .contact-submit {
+    outline: none;
+    border: none;
     width: 30%;
+    height: 6%;
     position: absolute;
-    right: 2vw;
+    right: 3vw;
     bottom: 5vh;
+    border-radius: 13px;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
 	            0 2px 2px rgba(0,0,0,0.11), 
 				0 4px 4px rgba(0,0,0,0.11) !important; 
@@ -275,7 +279,7 @@ ul {
 
 .contact-submit:hover {
     transition: 0.2s;
-    right: 1.9vw;
+    right: 2.9vw;
 	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
 	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
 		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),

@@ -98,7 +98,7 @@ class ProjectCard extends React.Component {
             if (option && this.state.html_res == "Text") {
                 return(
                     <div className="project_expanded">
-                        <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
+                        <div className="expanded_close" onClick={ () => this.close_expanded_project() } ref={this.closeButton}  >
                             <img src="./js/imported/braket.ai/assets/close.svg" alt="exit button" />
                         </div>
                         <Tabs tag={ this.props.type === "text" ? this.props.tag : (this.props.type==="images") ? this.props.link : this.props.htmlname} 

@@ -124,7 +124,7 @@
 			"0" : {
 				"name": "Landing",
 				"desktop": "./assets/listsdirectory_desktop.png",
-				"mobile": "./assets/NULL.png",
+				"mobile": "./assets/listsdirectory_mobile.png",
 				"numcom": "3",
 				"comments": {
 					"0": {

@@ -216,17 +216,17 @@
 
 /*	Tab Selectors*/
 .tab-selector {
-	width: 800px;
+	width: 600px;
 	margin: auto;
 	margin-top: 50px;
+    position: relative;
 }
 
 .tab-selector div {
-	width: auto;
+	width: fit-content;
 	display: flex;
 	flex-direction: row;
-	margin-left: 50%;
-	transform: translate(-50%, 0%);
+    margin: auto;
 }
 
 .tab-selector p {

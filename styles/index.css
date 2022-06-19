@@ -258,7 +258,7 @@ ul {
     position: absolute;
     top: 2vh;
     right: 1vw;
-    cursor: pointerl
+    cursor: pointer;
 }
 
 .contact-submit {
@@ -290,6 +290,11 @@ ul {
 @media only screen and ( max-width: 1200px) {
     .project-links {
         display: block !important;
+    }
+
+    .contact-form__opened {
+        width: 50%;
+        height: 60%;
     }
 }
 
@@ -333,7 +338,7 @@ ul {
     .intro_location {
         font-size: 15px !important;
         margin-top: 10px;
-        width: 120px;
+        width: 150px;
         margin-left: 50%;
         transform: translate(-50%, -0%);
     }
@@ -353,6 +358,14 @@ ul {
     .contact-form__opened {
         width: 90%;
         height: 60%;
+    }
+
+    .contact-form__opened img {
+        height: 17px;
+        position: absolute;
+        top: 2vh;
+        right: 5vw;
+        cursor: pointer;
     }
 }
 

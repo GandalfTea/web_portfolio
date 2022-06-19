@@ -11,11 +11,12 @@ class ProjectCard extends React.Component {
 		this.expand = this.expand.bind(this);
         this.move_close_button = this.move_close_button.bind(this);
 
+        // Moving the corrent Closing Button 
         this.closeButton = React.createRef();
 	}
 
 	change_state_expand( new_state ) {
-			this.setState({ expand: new_state });
+		this.setState({ expand: new_state });
 	}
 
     change_state_responsive( new_state ) {
@@ -55,8 +56,8 @@ class ProjectCard extends React.Component {
     move_close_button() {
         if( this.state.expand ) {
 
-
             // Make use of React Refs to link to this project's close button
+            // Move Button on Scroll
             var parent = this.closeButton.current.parentElement;
 
             const start = parent.offsetTop - window.innerHeight/2 + 50; 
@@ -91,7 +92,8 @@ class ProjectCard extends React.Component {
 
 	/* Expand or collapse the project card */
 	expand( option ) {
-
+        
+        // Special collapse rules for injected HTML
         if( this.props.type == "html") {
             if (option && this.state.html_res == "Text") {
                 return(
@@ -116,7 +118,7 @@ class ProjectCard extends React.Component {
             }
         }
 
-        // Normal Open Projects
+        // Normal Open Projects: X > 1200
 		if(option && this.state.res == "Normal") {
 			return(
 				<div className="project_expanded">
@@ -128,7 +130,7 @@ class ProjectCard extends React.Component {
 				</div>
 			);
 
-        // Middle Open Text Projects
+        // 700 < X < 1200 Open Text Projects
         } else if ( option && this.state.res == "Text") {
             return(
 				<div className="project_expanded">
@@ -140,7 +142,7 @@ class ProjectCard extends React.Component {
 				</div>
             );
 
-        // Mobile Open Projects
+        // Mobile Open Projects : X < 700
         } else if ( option && this.state.res == "Mobile") {
 			return(
 				<div className="project_expanded__mobile">
@@ -151,6 +153,7 @@ class ProjectCard extends React.Component {
                           git={ this.props.git } />
 				</div>
 			);
+
         // Normal Collapsed Projects
 		} else if( this.state.res == "Normal" || this.state.res == "Text" ){
             // The extra div is because of some wierd fallthrough of style attributes
@@ -179,6 +182,7 @@ class ProjectCard extends React.Component {
                     </div>
                 </div>
 			);
+
         // Mobile Collapsed Projects
 		} else {
             return(
@@ -192,7 +196,6 @@ class ProjectCard extends React.Component {
             );
         }
 	}
-
 
 	render() {
 		return (

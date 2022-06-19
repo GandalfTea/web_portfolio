@@ -6,7 +6,6 @@ import ProjectCard from './Project.jsx';
 import ContactForm from './Contact.jsx';
 
 // Present this website in console
-
 console.log(`
       _._     _,-'""\-.
      (,-.\`.,'(       |\`-/|
@@ -16,6 +15,7 @@ console.log(`
 console.log("\n\nLastly, there is this website, built in React.js with JSX.");
 console.log("Find the code at: https://github.com/GandalfTea/web_portfolio");
 console.log(".............................................................");
+
 
 
 const Introduction = function() {
@@ -40,8 +40,6 @@ const TimeEntry = function(props) {
 }
 
 
-//<TimeEntry start="2021" until="2022" title="Graphic Design Advisor" description="for Claritatea Magazine" />
-
 const Experience = function() {
 	return(
 		<div className="experience">
@@ -64,11 +62,15 @@ const Education = function() {
 			<TimeEntry start="2020" until="2022" title="Virtual and Augmented Reality Development" description="BSc (Hons) at the University of Portsmouth, UK" />
 			<p>Completed courses such as:</p>
 			<ul> 
-				<li>Mobile Application Development</li> 
-				<li>Mathematical Elements for Games and Animation (Projective and Affine Space, Projective Transformations, Physics Simulation, Quaternions, etc.)</li>
-				<li>Virtual and Augmented Reality Development (Live Player Facial and Hand Tracking, SLAM, WebXR, Unreal Engine)</li>
+				<li>UX / UI</li>
 				<li>Agile Methodologies</li>
-				<li>User Experience Design</li>
+				<li>Mobile Application Development ( <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank" aria-label="link to wiki">PWAs</a> )</li> 
+				<li><a href="https://en.wikipedia.org/wiki/Extended_reality" target="_blank" aria-label="Wiki">XR</a> Development (Live Facial and Hand Tracking, 
+                <a href="https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping" target="_blank" aria-label="link to wiki"> SLAM</a>, 
+                <a href="https://immersiveweb.dev/" target="_blank" aria-label="link to wiki"> WebXR</a>, 
+                <a href="https://www.unrealengine.com/en-US" target="_blank" aria-label="link to UE4 website"> UE4</a>)</li>
+				<li>Math (Multiple View Geometry, Projective and Affine Space, Projective Transformations, Physics Simulation, Tensor Arithmetic, etc.)</li>
+                <li>3D Modeling and Animation</li>
 			</ul>
 		</div>
 	)
@@ -82,11 +84,13 @@ const AdditionalSkills = function() {
 		<div className="skills">
 			<h3>Additional Skills</h3>
 			<ul>
-				<li>Proficient at using advanced Linux distros and the Bash terminal. Can work without a GUI, IDE or through ssh (also with X11). I like coding in Vim.</li>
-				<li>Advanced knowledge of <strong>C++</strong> and general low-level programming.</li>
-				<li>Decent knowledge of <strong>Python</strong> and modules such as numpy, scipy, opencv</li>
-				<li>Limited experience with <strong>Neural Networks</strong> and Dataset creation.</li>
-				<li>Advanced knowledge of <strong>illustration</strong> and general raster digital art.</li>
+				<li>Linux and Bash. Can work without a GUI, IDE or through ssh.</li>
+                <li>C, C++ and Python</li>
+                <li>Git and GitHub</li>
+				<li>Raster Illustrations and Digital Art</li>
+                <li>Adobe Suite</li>
+                <li>Microsoft Suite</li>
+				<li>Limited experience with Neural Networks.</li>
 			</ul>
 		</div>
 	)

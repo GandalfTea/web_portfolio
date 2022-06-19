@@ -10,6 +10,8 @@ class ProjectCard extends React.Component {
 		this.state = { expand: false, pending_closure: false, res: "Normal", html_res:"Normal" };
 		this.expand = this.expand.bind(this);
         this.move_close_button = this.move_close_button.bind(this);
+
+        this.closeButton = React.createRef();
 	}
 
 	change_state_expand( new_state ) {
@@ -52,37 +54,37 @@ class ProjectCard extends React.Component {
 
     move_close_button() {
         if( this.state.expand ) {
-            // Get Button Relative to Project
 
 
-            // Iterate through all on-screen buttons and see which one is on screen
-            const start = document.getElementsByClassName("project_expanded")[0].offsetTop - window.innerHeight/2 + 50; 
-            const stop = document.getElementsByClassName("project_expanded")[0].offsetTop +  document.getElementsByClassName("project_expanded")[0].clientHeight - window.innerHeight/2 -50; 
+            // Make use of React Refs to link to this project's close button
+            var parent = this.closeButton.current.parentElement;
+
+            const start = parent.offsetTop - window.innerHeight/2 + 50; 
+            const stop = parent.clientHeight + parent.offsetTop - window.innerHeight/2 - 70; 
             const scrolltop = window.pageYOffset; 
 
             // Start tracking
-
             if( scrolltop > start && scrolltop < stop ) {
-                document.getElementsByClassName("expanded_close")[0].style.transition = "0s";
-                document.getElementsByClassName("expanded_close")[0].style.top = "49vh";
-                document.getElementsByClassName("expanded_close")[0].style.position = "fixed";
+                this.closeButton.current.style.transition = "0s";
+                this.closeButton.current.style.top = "49vh";
+                this.closeButton.current.style.position = "fixed";
                 
             // Stop tracking
             } else if ( scrolltop > stop ) {
-                document.getElementsByClassName("expanded_close")[0].style.position = "absolute";
-                document.getElementsByClassName("expanded_close")[0].style.top = "auto";
-                document.getElementsByClassName("expanded_close")[0].style.bottom = "20px";
+                this.closeButton.current.style.position = "absolute";
+                this.closeButton.current.style.top = "auto";
+                this.closeButton.current.style.bottom = "20px";
 
             // If you go up again
             } else if ( scrolltop < start ) {
-                document.getElementsByClassName("expanded_close")[0].style.top = "50px";
-                document.getElementsByClassName("expanded_close")[0].style.position = "absolute";
+                this.closeButton.current.style.top = "50px";
+                this.closeButton.current.style.position = "absolute";
             }
         }
     }
 
     close_expanded_project() {
-        const destination = document.getElementsByClassName("project_expanded")[0].offsetTop - window.innerHeight/2 + 50; 
+        const destination = this.closeButton.current.parentElement.offsetTop - window.innerHeight/2 + 50; 
         window.scrollTo( {top: destination} );
         this.change_state_expand(false);
     }
@@ -118,7 +120,7 @@ class ProjectCard extends React.Component {
 		if(option && this.state.res == "Normal") {
 			return(
 				<div className="project_expanded">
-                    <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
+                    <div className="expanded_close" onClick={ () => this.close_expanded_project() }  ref={this.closeButton} >
                         <img src="./js/imported/braket.ai/assets/close.svg" alt="exit button" />
                     </div>
 					<Tabs link={ this.props.type === "images" ? this.props.link : this.props.htmlname} 
@@ -130,7 +132,7 @@ class ProjectCard extends React.Component {
         } else if ( option && this.state.res == "Text") {
             return(
 				<div className="project_expanded">
-                    <div className="expanded_close" onClick={ () => this.close_expanded_project() } >
+                    <div className="expanded_close" onClick={ () => this.close_expanded_project() }  ref={this.closeButton} >
                         <img src="./js/imported/braket.ai/assets/close.svg" alt="exit button" />
                     </div>
 					<Tabs tag={ this.props.type === "text" ? this.props.tag : (this.props.type==="images") ? this.props.link : this.props.htmlname} 

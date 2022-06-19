@@ -10,6 +10,8 @@ class ProjectCard extends React.Component {
 		this.state = { expand: false, pending_closure: false, res: "Normal", html_res:"Normal" };
 		this.expand = this.expand.bind(this);
         this.move_close_button = this.move_close_button.bind(this);
+        this.change_state_responsive = this.change_state_responsive.bind(this);
+        this.change_state_expand = this.change_state_expand.bind(this);
 
         // Moving the corrent Closing Button 
         this.closeButton = React.createRef();
@@ -33,8 +35,6 @@ class ProjectCard extends React.Component {
         if( document.body.clientWidth < 1500) { this.setState({ html_res: "Text"}); } else
         if( document.body.clientWidth > 1500) { this.setState({ html_res: "Normal"}); } 
 
-        // Position close button
-        if( this.state.res == "Normal" || this.state.res == "Text") window.addEventListener('scroll', this.move_close_button);
 
         window.addEventListener('resize', (event) => {
             // Note:  If is faster than switch
@@ -47,6 +47,7 @@ class ProjectCard extends React.Component {
             if( document.body.clientWidth > 1500) { this.setState({ html_res: "Normal"}); }
 
         }, true);
+
 	}
 
     componentWillUnmount() {
@@ -96,6 +97,10 @@ class ProjectCard extends React.Component {
         // Special collapse rules for injected HTML
         if( this.props.type == "html") {
             if (option && this.state.html_res == "Text") {
+
+                // Position close button
+                if( this.state.res == "Normal" || this.state.res == "Text") window.addEventListener('scroll', this.move_close_button);
+
                 return(
                     <div className="project_expanded">
                         <div className="expanded_close" onClick={ () => this.close_expanded_project() } ref={this.closeButton}  >
@@ -120,6 +125,10 @@ class ProjectCard extends React.Component {
 
         // Normal Open Projects: X > 1200
 		if(option && this.state.res == "Normal") {
+
+            // Position close button
+            if( this.state.res == "Normal" || this.state.res == "Text") window.addEventListener('scroll', this.move_close_button);
+
 			return(
 				<div className="project_expanded">
                     <div className="expanded_close" onClick={ () => this.close_expanded_project() }  ref={this.closeButton} >
@@ -132,6 +141,10 @@ class ProjectCard extends React.Component {
 
         // 700 < X < 1200 Open Text Projects
         } else if ( option && this.state.res == "Text") {
+
+            // Position close button
+            if( this.state.res == "Normal" || this.state.res == "Text") window.addEventListener('scroll', this.move_close_button);
+
             return(
 				<div className="project_expanded">
                     <div className="expanded_close" onClick={ () => this.close_expanded_project() }  ref={this.closeButton} >

@@ -52,6 +52,7 @@ class ProjectCard extends React.Component {
 
     move_close_button() {
         if( this.state.expand ) {
+            // Get Button Relative to Project
             const start = document.getElementsByClassName("project_expanded")[0].offsetTop - window.innerHeight/2 + 50; 
             const stop = document.getElementsByClassName("project_expanded")[0].offsetTop +  document.getElementsByClassName("project_expanded")[0].clientHeight - window.innerHeight/2 -50; 
             const scrolltop = window.pageYOffset; 
@@ -102,7 +103,9 @@ class ProjectCard extends React.Component {
                     <div className="project_expanded__mobile">
                         <Tabs tag={ this.props.type === "text" ? this.props.tag : (this.props.type==="images") ? this.props.link : this.props.htmlname} 
                               type="text" 
-                              mobile="true" />
+                              mobile="true" 
+                              link=""
+                              git={ this.props.git } />
                     </div>
                 );
             }
@@ -138,7 +141,9 @@ class ProjectCard extends React.Component {
 				<div className="project_expanded__mobile">
 					<Tabs tag={ this.props.type === "text" ? this.props.tag : (this.props.type==="images") ? this.props.link : this.props.htmlname} 
                           type="text" 
-                          mobile="true" />
+                          mobile="true" 
+                          link={ (this.props.link != null) ? this.props.link : "" }
+                          git={ this.props.git } />
 				</div>
 			);
         // Normal Collapsed Projects

@@ -143,7 +143,7 @@ class Tabs extends React.Component {
 			return(
 					<div className="expanded_restrain">
 						<div className="expanded_about">
-							<h3>About</h3>
+                            <h3>{sites[this.props.link]["name"]}</h3>
 							<p> {sites[this.props.link]["description"]} </p>
 						</div>
 						<div className="tab-selector">
@@ -165,7 +165,7 @@ class Tabs extends React.Component {
 			return(
 					<div className="expanded_restrain">
 						<div className="expanded_about">
-							<h3>About</h3>
+                            <h3>{sites[this.props.link]["name"]}</h3>
 							<p> {sites[this.props.link]["tabs"][this.state.tab]["description"]} </p>
 						</div>
 						<div className="tab-selector">
@@ -186,12 +186,22 @@ class Tabs extends React.Component {
             for( var i = 0; i < par_num; i++) {
                paragraphs.push( <p>{ sites[this.props.tag]["text"][i] } </p> )
             }
-
+            
             if( sites[this.props.tag]["img"] === "false" ) {
                 return(
                     <div className={ (this.props.mobile == "true" ) ? "expanded_about__mobile" : "expanded_about" } >
                         <h3>{sites[this.props.tag]["name"]}</h3>
                         {paragraphs}
+                        <div className="mobile_links">
+                            { (this.props.mobile == "true") ? <div className="expanded_mobile_link"
+                                                                   onClick={ () => { window.open( this.props.git, '_blank')} } > 
+                                                                        <img src="./assets/github-link_white.svg" alt="github link" />
+                                                              </div> : null }
+                            { (this.props.mobile == "true") ? <div className={ (this.props.link != "") ? "expanded_mobile_link mobile_link_second" : "expanded_mobile_link_unavailable mobile_link_second" }
+                                                                   onClick={ (this.props.link != null) ? () => { window.open( "http://" + this.props.link, '_blank')} : null } >
+                                                                        <img src="./assets/live-link_white.svg" alt="live link" />
+                                                              </div> : null }
+                        </div>
                     </div>
                 );
             } else {

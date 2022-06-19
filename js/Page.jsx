@@ -26,8 +26,8 @@ const Introduction = function() {
 			<img src="./assets/drawing.jpg" className="intro_image" alt="introduction painting" />
 			<div>
 				<h2 className="intro__des_title">About</h2>
+				<p>Working freelance, I have developed and designed a magazine website and real estate presentation websites. Personally, I am working towards a Dataset Marketplace for crowd-sourcing the creation and maintenance of datasets. In my free time, I have also delved into Computer Vision, Computer Graphics and Financial Markets Simulation.</p>
 				<p>With an ability to extract and learn  information at a fast rate,  I  often  sink  deep  into various  fields  of  study  and  like  to  <a href="https://github.com/GandalfTea/enginehmw" target="_blank" aria-label="link towards game engine">test  my  knowledge and understanding</a> by creating. <a href="https://en.wikipedia.org/wiki/Richard_Feynman" target="_blank" aria-label="Richard Feynman Quote"><i>What I cannot create I do not understand</i></a>. Having an obsessive personality, I am unwilling to stop working until a satisfying solution is found. I am motivated by understanding, take that as my <a href="https://www.youtube.com/watch?v=vXrpFxHfppI&ab_channel=KingCrimson" target="_blank" aria-label="link towards King Crimson - Epitaph">epitaph</a>.</p>
-				<p>Working freelance, I have developed and designed a magazine website and real estate presentation websites. Personally, I am working towards a Dataset Marketplace for crowd-sourcing the creating and maintenance of datasets. In my free time, I have also delved into Computer Vision, building SLAM algorithms in C++ and Python, Computer Graphics developing a game engine from scratch, and Financial Markets, developing a market simulator.</p>
 			</div>
 		</div>
 	);
@@ -97,6 +97,7 @@ const AdditionalSkills = function() {
 const Projects = function() {
 	const [open, setOpen] = useState(false);
 	var button_src = './assets/expand_arrow.svg';
+    var idx = 0;
 	if(open) {
 		return (
 			<div className="projects">
@@ -108,41 +109,47 @@ const Projects = function() {
                               htmlname="braket.ai" 
                               filename="DatasetPage.jsx" 
                               git="https://github.com/GandalfTea/braket.ai"
-							  description="Work in progress UI/UX." />
+							  description="Work in progress UI/UX." 
+                              idx={ idx++ } />
 
 				<ProjectCard title="House Presentation Website" 
                              tech="Three.js, jQuery, Google Maps API, LazyLoad" 
                              link='stejar.casa' 
                              type="images"
                              git="https://github.com/GandalfTea/stejar.casa"
-							 description="Presentation done with 3D models, interactive image viewers, etc."/>
+							 description="Presentation done with 3D models, interactive image viewers, etc."
+                             idx={ idx++ } />
 
 				<ProjectCard title="Magazine Website with RESTful Admin Panel" 
                              tech="jQuery, REST, Encryption, XD" 
                              link="claritatea.netlify.app/" 
                              type="images"
                              git="https://github.com/GandalfTea/claritatea.ro"
-							 description="Showcasing student creations, and keeping contributors updated."/>
+							 description="Showcasing student creations, and keeping contributors updated."
+                             idx={ idx++ } />
 
 				<ProjectCard title="Advanced TODO list" 
                              tech="jQuery, QRCode.js, Base64 URL" 
                              link="lists.directory" 
                              type="images" 
                              git="https://github.com/GandalfTea/lists.directory"
-							 description="No distractions, instant utility." />
+							 description="No distractions, instant utility." 
+                             idx={ idx++ } />
 
 				<ProjectCard  title="Hyper-Dimensional Object Visualizer in C++ with Web Assembly" 
                               tech="Web Assembly, emscripten. C++, OpenGL" 
                               type="text" 
                               tag="4D" 
                               git="https://github.com/GandalfTea/tinydim"
-							  description="Fun project for simulating 4D and Spacetime Manifolds." />
+							  description="Fun project for simulating 4D and Spacetime Manifolds." 
+                             idx={ idx++ } />
 
 				<ProjectCard title="Personal Project Blog" 
                              tech="React.js, JSX, Webpack, JSON" 
                              link="louisgeorge.me"  
                              type="images"
-							 description="A personal blog / project tracker." />
+							 description="A personal blog / project tracker."
+                             idx={ idx++ } />
 
 				<button className="projects_expand_button" onClick={ () => setOpen(false) } aria-label="expand"> 
 						<img src= './assets/collapse_arrow.svg' alt="expand button" />
@@ -160,21 +167,24 @@ const Projects = function() {
                               htmlname="braket.ai" 
                               filename="DatasetPage.jsx" 
                               git="https://github.com/GandalfTea/braket.ai"
-							  description="Work in progress UI/UX." />
+							  description="Work in progress UI/UX." 
+                              idx={ idx++ } />
 
 				<ProjectCard title="House Presentation Website" 
                              tech="Three.js, jQuery, Google Maps API, LazyLoad" 
                              link='stejar.casa' 
                              type="images"
                              git="https://github.com/GandalfTea/stejar.casa"
-							 description="Presentation done with 3D models, interactive image viewers, etc."/>
+							 description="Presentation done with 3D models, interactive image viewers, etc."
+                             idx={ idx++ } />
 
 				<ProjectCard title="Magazine Website with RESTful Admin Panel" 
                              tech="jQuery, REST, Encryption, XD" 
                              link="claritatea.netlify.app/" 
                              type="images"
                              git="https://github.com/GandalfTea/claritatea.ro"
-							 description="Showcasing student creations, and keeping contributors updated."/>
+							 description="Showcasing student creations, and keeping contributors updated."
+                             idx={ idx++ } />
 
 				<button className="projects_expand_button" onClick={ () => setOpen(true) } aria-label="expand">
 						<img src= './assets/more.svg' alt="close expanded projects" />

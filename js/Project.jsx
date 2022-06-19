@@ -53,6 +53,9 @@ class ProjectCard extends React.Component {
     move_close_button() {
         if( this.state.expand ) {
             // Get Button Relative to Project
+
+
+            // Iterate through all on-screen buttons and see which one is on screen
             const start = document.getElementsByClassName("project_expanded")[0].offsetTop - window.innerHeight/2 + 50; 
             const stop = document.getElementsByClassName("project_expanded")[0].offsetTop +  document.getElementsByClassName("project_expanded")[0].clientHeight - window.innerHeight/2 -50; 
             const scrolltop = window.pageYOffset; 

@@ -96,6 +96,14 @@ const AdditionalSkills = function() {
 	)
 }
 
+/*
+				<ProjectCard title="Personal Project Blog" 
+                             tech="React.js, JSX, Webpack, JSON" 
+                             link="louisgeorge.me"  
+                             type="images"
+							 description="A personal blog / project tracker."
+                             idx={ idx++ } />
+*/
 
 // Use Hook to expand and show all projects. Initially only 3.
 const Projects = function() {
@@ -146,13 +154,6 @@ const Projects = function() {
                               tag="4D" 
                               git="https://github.com/GandalfTea/tinydim"
 							  description="Fun project for simulating 4D and Spacetime Manifolds." 
-                             idx={ idx++ } />
-
-				<ProjectCard title="Personal Project Blog" 
-                             tech="React.js, JSX, Webpack, JSON" 
-                             link="louisgeorge.me"  
-                             type="images"
-							 description="A personal blog / project tracker."
                              idx={ idx++ } />
 
 				<button className="projects_expand_button" onClick={ () => setOpen(false) } aria-label="expand"> 

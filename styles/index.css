@@ -76,11 +76,6 @@ ul {
 	margin-left: 5px;
 }
 
-.intro_image:active {
-	height: 800px;
-	transition: 0.4s;
-}
-
 .intro__des_title {
 	margin-bottom: 20px;
     font-size: 22px;
@@ -342,6 +337,11 @@ ul {
     .intro div p {
         font-size: 20px;
         
+    }
+
+    /*  PROJECT */
+    .projects_expand_button {
+	    background-color: #eeeeee;
     }
 
 

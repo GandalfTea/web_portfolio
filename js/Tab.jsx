@@ -143,7 +143,7 @@ class Tabs extends React.Component {
 			return(
 					<div className="expanded_restrain">
 						<div className="expanded_about">
-							<h3>About</h3>
+                            <h3>{sites[this.props.link]["name"]}</h3>
 							<p> {sites[this.props.link]["description"]} </p>
 						</div>
 						<div className="tab-selector">
@@ -165,7 +165,7 @@ class Tabs extends React.Component {
 			return(
 					<div className="expanded_restrain">
 						<div className="expanded_about">
-							<h3>About</h3>
+                            <h3>{sites[this.props.link]["name"]}</h3>
 							<p> {sites[this.props.link]["tabs"][this.state.tab]["description"]} </p>
 						</div>
 						<div className="tab-selector">

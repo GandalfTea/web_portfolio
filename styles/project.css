@@ -33,6 +33,10 @@
 				0 8px 16px rgba(0,0,0,0.11);
 }
 
+.project-container:hover {
+	background-color: #161616;
+}
+
 .project-container__mobile {
     padding: 30px 40px;
     width: 100%;
@@ -43,6 +47,7 @@
 .project-container a {
 	color: white;
 	font-family: "Lato";
+    text-decoration: underline;
 }
 
 
@@ -63,8 +68,9 @@
 .project-container h3 {
 	font-size: 16px;
 	font-weight: 900;
-	margin-top: 10px;
-	color: #BBB;
+	margin-top: 3px;
+	color: #AAA;
+    word-spacing: 3px;
 }
 
 .project-container__mobile h3 {
@@ -72,6 +78,11 @@
 	font-weight: 900;
 	margin-top: 0px;
 	color: #BBB;
+}
+
+.project-container p {
+    margin-top: 5px;
+	font-size: 15px;
 }
 
 .project-container:hover {
@@ -99,15 +110,15 @@
 	border-radius: 13px;
 }
 
+
 .projects_expand_button:hover {
-	background-color: #f6f6f6;
+	background-color: #eeeeee;
 }
 
-.projects_expand_button img {
-	width: 50px;
+.projects_expand_button p {
+    font-size: 20px;
 	margin: auto;
 }
-
 
 
 /*      LINK BUTTONS     */
@@ -123,6 +134,7 @@
     width: 50px;
     height: 45%;
     background-color: #2f2f2f;
+	background-color: #161616;
     border-radius: 13px;
     position: relative;
     cursor: pointer;
@@ -335,4 +347,12 @@
 }
 
 
+/*  MOBILE  */
 
+.project-container__mobile img {
+    width: 12%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 10%;
+}

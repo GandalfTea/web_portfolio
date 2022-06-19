@@ -22,11 +22,11 @@ const Introduction = function() {
 	return (
 		<div className="intro">
 			<h1 className="intro_name"><a href="https://github.com/GandalfTea" target="_blank" aria-label="GitHub">Octavian Rusu</a></h1>
-			<p className="intro_location"><b>Toronto, Canada</b></p>
+			<p className="intro_location"><b>Front End Developer</b></p>
 			<img src="./assets/drawing.jpg" className="intro_image" alt="introduction painting" />
 			<div>
 				<h2 className="intro__des_title">About</h2>
-				<p>I am an aspiring Front-End Developer. With an ability to extract and learn  information at a fast rate,  I  often  sink  deep  into various  fields  of  study  and  like  to  <a href="https://github.com/GandalfTea/enginehmw" target="_blank" aria-label="link towards game engine">test  my  knowledge and understanding</a> by creating. <a href="https://en.wikipedia.org/wiki/Richard_Feynman" target="_blank" aria-label="Richard Feynman Quote"><i>What I cannot create I do not understand</i></a>. Having an obsessive personality, I am unwilling to stop working until a satisfying solution is found. I am motivated by understanding, take that as my <a href="https://www.youtube.com/watch?v=vXrpFxHfppI&ab_channel=KingCrimson" target="_blank" aria-label="link towards King Crimson - Epitaph">epitaph</a>.</p>
+				<p>With an ability to extract and learn  information at a fast rate,  I  often  sink  deep  into various  fields  of  study  and  like  to  <a href="https://github.com/GandalfTea/enginehmw" target="_blank" aria-label="link towards game engine">test  my  knowledge and understanding</a> by creating. <a href="https://en.wikipedia.org/wiki/Richard_Feynman" target="_blank" aria-label="Richard Feynman Quote"><i>What I cannot create I do not understand</i></a>. Having an obsessive personality, I am unwilling to stop working until a satisfying solution is found. I am motivated by understanding, take that as my <a href="https://www.youtube.com/watch?v=vXrpFxHfppI&ab_channel=KingCrimson" target="_blank" aria-label="link towards King Crimson - Epitaph">epitaph</a>.</p>
 				<p>Working freelance, I have developed and designed a magazine website and real estate presentation websites. Personally, I am working towards a Dataset Marketplace for crowd-sourcing the creating and maintenance of datasets. In my free time, I have also delved into Computer Vision, building SLAM algorithms in C++ and Python, Computer Graphics developing a game engine from scratch, and Financial Markets, developing a market simulator.</p>
 			</div>
 		</div>
@@ -100,45 +100,46 @@ const Projects = function() {
 	if(open) {
 		return (
 			<div className="projects">
+			    <h3>Projects</h3>
 
-				<ProjectCard  title="AI Dataset Marketplace and Source Control" 
-                              tech="React.js, JSX" 
+				<ProjectCard  title="AI Dataset Marketplace and Crowd-Sourcing" 
+                              tech="React.js, JSX, JSON, Webpack, ESLint" 
                               type="html" 
                               htmlname="braket.ai" 
                               filename="DatasetPage.jsx" 
                               git="https://github.com/GandalfTea/braket.ai"
-							  description="The front-end of a marketplace website that also offers tools for source-control and crowd-sourcing for the creation of new datasets." />
+							  description="Work in progress UI/UX." />
 
 				<ProjectCard title="House Presentation Website" 
-                             tech="Three.js, jQuery, Google Maps API" 
+                             tech="Three.js, jQuery, Google Maps API, LazyLoad" 
                              link='stejar.casa' 
                              type="images"
                              git="https://github.com/GandalfTea/stejar.casa"
-							 description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
+							 description="Presentation done with 3D models, interactive image viewers, etc."/>
 
 				<ProjectCard title="Magazine Website with RESTful Admin Panel" 
-                             tech="jQuery, REST," 
+                             tech="jQuery, REST, Encryption, XD" 
                              link="claritatea.netlify.app/" 
                              type="images"
                              git="https://github.com/GandalfTea/claritatea.ro"
-							 description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
+							 description="Showcasing student creations, and keeping contributors updated."/>
 
 				<ProjectCard title="Advanced TODO list" 
-                             tech="jQuery, QR code generator, base64 links" 
+                             tech="jQuery, QRCode.js, Base64 URL" 
                              link="lists.directory" 
                              type="images" 
                              git="https://github.com/GandalfTea/lists.directory"
-							 description="An advanced shareable todo list with QR code generation, base64 link generation, priority setting, hex input background color change." />
+							 description="No distractions, instant utility." />
 
 				<ProjectCard  title="Hyper-Dimensional Object Visualizer in C++ with Web Assembly" 
-                              tech="C++, Web Assembly, emscripten" 
+                              tech="Web Assembly, emscripten. C++, OpenGL" 
                               type="text" 
                               tag="4D" 
                               git="https://github.com/GandalfTea/tinydim"
-							  description="A multi-dimensional object simulator and visualiser written in C++ with OpenGL and GLUT, ported to the web using Web Assembly." />
+							  description="Fun project for simulating 4D and Spacetime Manifolds." />
 
 				<ProjectCard title="Personal Project Blog" 
-                             tech="React.js, JSX" 
+                             tech="React.js, JSX, Webpack, JSON" 
                              link="louisgeorge.me"  
                              type="images"
 							 description="A personal blog / project tracker." />
@@ -152,30 +153,31 @@ const Projects = function() {
 	} else {
 		return (
 			<div className="projects">
-				<ProjectCard  title="AI Dataset Marketplace and Source Control" 
-                              tech="React.js, JSX" 
+			    <h2>Projects</h2>
+				<ProjectCard  title="AI Dataset Marketplace and Crowd-Sourcing" 
+                              tech="React.js, JSX, JSON, Webpack, ESLint" 
                               type="html" 
                               htmlname="braket.ai" 
                               filename="DatasetPage.jsx" 
                               git="https://github.com/GandalfTea/braket.ai"
-							  description="The front-end of a marketplace website that also offers tools for source-control and crowd-sourcing for the creation of new datasets." />
+							  description="Work in progress UI/UX." />
 
 				<ProjectCard title="House Presentation Website" 
-                             tech="Three.js, jQuery, Google Maps API" 
+                             tech="Three.js, jQuery, Google Maps API, LazyLoad" 
                              link='stejar.casa' 
                              type="images"
                              git="https://github.com/GandalfTea/stejar.casa"
-							 description="A modern house presentation website with 3D house and terrain model, location with the Google Maps API and embedded structure videos."/>
+							 description="Presentation done with 3D models, interactive image viewers, etc."/>
 
 				<ProjectCard title="Magazine Website with RESTful Admin Panel" 
-                             tech="jQuery, REST," 
+                             tech="jQuery, REST, Encryption, XD" 
                              link="claritatea.netlify.app/" 
                              type="images"
                              git="https://github.com/GandalfTea/claritatea.ro"
-							 description="A magazine presentation website done for Claritatea. It contains a live news section that is updated from a secured admin panel."/>
+							 description="Showcasing student creations, and keeping contributors updated."/>
 
 				<button className="projects_expand_button" onClick={ () => setOpen(true) } aria-label="expand">
-						<img src= './assets/expand_arrow.svg' alt="close expanded projects" />
+						<img src= './assets/more.svg' alt="close expanded projects" />
 				</button>
 			</div>
 		);
@@ -254,9 +256,8 @@ class Page extends React.Component {
 	}
 	
 	render() {
-		var button_src = './assets/expand_arrow.svg';
+		var button_src = './assets/more.svg';
 		if(this.state.extra) {
-			// Change button icon to collapse
 			button_src = './assets/collapse_arrow.svg';	
 		}
 

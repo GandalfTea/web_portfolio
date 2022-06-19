@@ -151,7 +151,8 @@ class ProjectCard extends React.Component {
                     <div className="project-container"
                                 onClick={ () => this.change_state_expand(!this.state.expand)} >
                         <div>
-                            <a href={"https://www." + this.props.link} target="_blank" aria-label="link towards live project site"> {this.props.link}</a>
+                            { //<a href={"https://www." + this.props.link} target="_blank" aria-label="link towards live project site"> {this.props.link}</a>
+                            }
                             <h2> { this.props.title } </h2>
                             <h3> { this.props.tech } </h3>
                             <p>  { this.props.description } </p>
@@ -176,6 +177,7 @@ class ProjectCard extends React.Component {
 					<a href={"https://www." + this.props.link} target="_blank" aria-label="link towards live project site"> {this.props.link}</a>
 					<h2> { this.props.title } </h2>
 					<h3> { this.props.tech } </h3>
+				    <img src= './assets/expand_arrow_white.svg' alt="expand project" />
 				</div>
             );
         }
